@@ -1,7 +1,7 @@
 # Universal_App_Template
 UI Templates and toolkits for building web-based applications which are based on RESTful style APIs
 
-Here is my final project fot the course **Mobile Internet Technology**.
+Here is my final project for the course **Mobile Internet Technology**.
 Based on the **iOS** platform, I am working on an universal application, which can generate the major 
 components and user interface for web-based applications. And those websites are required to open
 ***RESTful*** APIs.
