@@ -7,9 +7,9 @@ components and user interface for web-based applications. And those websites are
 ***RESTful*** APIs.
 
 ***
-For more information about **REST**, please refer to:
-<http://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm>
+For more information about **REST**, please refer to [this paper]
+(http://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm).
 
 ***
-The alpha version of the application fits in with the APIs from **豆瓣**, please refer to:
-<https://developers.douban.com/wiki/?title=api_v2>
+The alpha version of the application fits in with the APIs from **豆瓣**, please refer to [豆瓣API v2]
+(https://developers.douban.com/wiki/?title=api_v2).
