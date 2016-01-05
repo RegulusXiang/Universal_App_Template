@@ -21,6 +21,8 @@ class ViewController: UIViewController, UITextFieldDelegate,
     
     @IBOutlet weak var photoImageView: UIImageView!
     
+    @IBOutlet weak var ratingCpontrol: RatingControl!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Handle the text field’s user input through delegate callbacks.
@@ -35,9 +37,9 @@ class ViewController: UIViewController, UITextFieldDelegate,
 //    }
 
     //MARK: Action
-    @IBAction func setDefaultLabel(sender: UIButton) {
-        mealNameLabel.text = "Default Text"
-    }
+//    @IBAction func setDefaultLabel(sender: UIButton) {
+//        mealNameLabel.text = "Default Text"
+//    }
     
     //it’s quite easy to give a view the same capabilities as a control
     //by adding a gesture recognizer to it.
