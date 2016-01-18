@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MealViewController.swift
 //  FoodTracker
 //
 //  Created by xg on 16/1/2.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate,
+class MealViewController: UIViewController, UITextFieldDelegate,
                       UIImagePickerControllerDelegate, UINavigationControllerDelegate
     {// adopt the protocol for UITextFieldDelegate
 
@@ -17,7 +17,7 @@ class ViewController: UIViewController, UITextFieldDelegate,
     //! meansthe type is an implicitly unwrapped optional, which is an
     //optional type that will always have a value after the value is first set.
     
-    @IBOutlet weak var mealNameLabel: UILabel!
+    //@IBOutlet weak var mealNameLabel: UILabel!
     
     @IBOutlet weak var photoImageView: UIImageView!
     
@@ -89,7 +89,7 @@ class ViewController: UIViewController, UITextFieldDelegate,
     }
     
     func textFieldDidEndEditing(textField: UITextField) {
-        mealNameLabel.text = textField.text
+        //mealNameLabel.text = textField.text
         
     }
     
