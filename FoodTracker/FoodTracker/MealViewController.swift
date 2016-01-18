@@ -21,7 +21,17 @@ class MealViewController: UIViewController, UITextFieldDelegate,
     
     @IBOutlet weak var photoImageView: UIImageView!
     
-    @IBOutlet weak var ratingCpontrol: RatingControl!
+    @IBOutlet weak var ratingControl: RatingControl!
+    
+    /*
+    This value is either passed by `MealTableViewController` in `prepareForSegue(_:sender:)`
+    or constructed as part of adding a new meal.
+    */
+    var meal: Meal?
+    
+    @IBOutlet weak var saveButton: UIBarButtonItem!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +45,22 @@ class MealViewController: UIViewController, UITextFieldDelegate,
 //        super.didReceiveMemoryWarning()
 //        // Dispose of any resources that can be recreated.
 //    }
+    
+    //MARK: Navigation
+    //this method lets you configure a view controller before it's presented
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if saveButton === sender{ //This code uses the identity operator (===) to check that the object referenced by the saveButton outlet is the same object instance as sender. If it is, the if statement is executed.
+            let name = nameTextField.text ?? "" //if it’s nil, the operator the returns the empty string ("") instead.
+            let photo = photoImageView.image
+            let rating = ratingControl.rating
+            
+            //set the meal pass to be passed to the MealTableViewController before it's presented
+            meal = Meal(name: name, photo: photo, rating: rating)
+            
+            
+        }
+        
+    }
 
     //MARK: Action
 //    @IBAction func setDefaultLabel(sender: UIButton) {
