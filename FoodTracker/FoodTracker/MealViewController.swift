@@ -31,12 +31,17 @@ class MealViewController: UIViewController, UITextFieldDelegate,
     
     @IBOutlet weak var saveButton: UIBarButtonItem!
     
+    @IBAction func cancel(sender: UIBarButtonItem) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Handle the text field’s user input through delegate callbacks.
-        nameTextField.delegate = self //The self refers to the ViewController class
+        nameTextField.delegate = self //The self refers to the MealViewController class
+        
+        checkValidMealName()
         
     }
 
@@ -47,6 +52,7 @@ class MealViewController: UIViewController, UITextFieldDelegate,
 //    }
     
     //MARK: Navigation
+    
     //this method lets you configure a view controller before it's presented
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if saveButton === sender{ //This code uses the identity operator (===) to check that the object referenced by the saveButton outlet is the same object instance as sender. If it is, the if statement is executed.
@@ -117,7 +123,23 @@ class MealViewController: UIViewController, UITextFieldDelegate,
     func textFieldDidEndEditing(textField: UITextField) {
         //mealNameLabel.text = textField.text
         
+        checkValidMealName()
+        navigationItem.title = textField.text
+        
     }
+    
+    func textFieldDidBeginEditing(textField: UITextField) {
+        //Disable the save button while editing
+        saveButton.enabled = false
+    }
+    
+    func checkValidMealName(){
+        //Diable the save button if the text field is empty
+        let text = nameTextField.text ?? ""
+        saveButton.enabled = !text.isEmpty
+        
+    }
+    
     
    
     
