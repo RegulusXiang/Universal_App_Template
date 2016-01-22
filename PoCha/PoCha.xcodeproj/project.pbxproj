@@ -1,0 +1,517 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		18B607011C52354D00A79932 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B607001C52354D00A79932 /* AppDelegate.swift */; };
+		18B607031C52354D00A79932 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B607021C52354D00A79932 /* ViewController.swift */; };
+		18B607061C52354D00A79932 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18B607041C52354D00A79932 /* Main.storyboard */; };
+		18B607081C52354D00A79932 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18B607071C52354D00A79932 /* Assets.xcassets */; };
+		18B6070B1C52354D00A79932 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18B607091C52354D00A79932 /* LaunchScreen.storyboard */; };
+		18B607161C52354D00A79932 /* PoChaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B607151C52354D00A79932 /* PoChaTests.swift */; };
+		18B607211C52354D00A79932 /* PoChaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B607201C52354D00A79932 /* PoChaUITests.swift */; };
+		18B6072F1C52369900A79932 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B6072E1C52369900A79932 /* Book.swift */; };
+		18B607311C523DA800A79932 /* BookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B607301C523DA800A79932 /* BookTableViewCell.swift */; };
+		18B607331C5280BC00A79932 /* BookTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B607321C5280BC00A79932 /* BookTableViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		18B607121C52354D00A79932 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 18B606F51C52354D00A79932 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 18B606FC1C52354D00A79932;
+			remoteInfo = PoCha;
+		};
+		18B6071D1C52354D00A79932 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 18B606F51C52354D00A79932 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 18B606FC1C52354D00A79932;
+			remoteInfo = PoCha;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		18B606FD1C52354D00A79932 /* PoCha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PoCha.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		18B607001C52354D00A79932 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		18B607021C52354D00A79932 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		18B607051C52354D00A79932 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		18B607071C52354D00A79932 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		18B6070A1C52354D00A79932 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		18B6070C1C52354D00A79932 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18B607111C52354D00A79932 /* PoChaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PoChaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		18B607151C52354D00A79932 /* PoChaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoChaTests.swift; sourceTree = "<group>"; };
+		18B607171C52354D00A79932 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18B6071C1C52354D00A79932 /* PoChaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PoChaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		18B607201C52354D00A79932 /* PoChaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoChaUITests.swift; sourceTree = "<group>"; };
+		18B607221C52354D00A79932 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18B6072E1C52369900A79932 /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		18B607301C523DA800A79932 /* BookTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookTableViewCell.swift; sourceTree = "<group>"; };
+		18B607321C5280BC00A79932 /* BookTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookTableViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		18B606FA1C52354D00A79932 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18B6070E1C52354D00A79932 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18B607191C52354D00A79932 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		18B606F41C52354D00A79932 = {
+			isa = PBXGroup;
+			children = (
+				18B606FF1C52354D00A79932 /* PoCha */,
+				18B607141C52354D00A79932 /* PoChaTests */,
+				18B6071F1C52354D00A79932 /* PoChaUITests */,
+				18B606FE1C52354D00A79932 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		18B606FE1C52354D00A79932 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				18B606FD1C52354D00A79932 /* PoCha.app */,
+				18B607111C52354D00A79932 /* PoChaTests.xctest */,
+				18B6071C1C52354D00A79932 /* PoChaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		18B606FF1C52354D00A79932 /* PoCha */ = {
+			isa = PBXGroup;
+			children = (
+				18B607001C52354D00A79932 /* AppDelegate.swift */,
+				18B607021C52354D00A79932 /* ViewController.swift */,
+				18B607041C52354D00A79932 /* Main.storyboard */,
+				18B607301C523DA800A79932 /* BookTableViewCell.swift */,
+				18B607321C5280BC00A79932 /* BookTableViewController.swift */,
+				18B6072E1C52369900A79932 /* Book.swift */,
+				18B607071C52354D00A79932 /* Assets.xcassets */,
+				18B607091C52354D00A79932 /* LaunchScreen.storyboard */,
+				18B6070C1C52354D00A79932 /* Info.plist */,
+			);
+			path = PoCha;
+			sourceTree = "<group>";
+		};
+		18B607141C52354D00A79932 /* PoChaTests */ = {
+			isa = PBXGroup;
+			children = (
+				18B607151C52354D00A79932 /* PoChaTests.swift */,
+				18B607171C52354D00A79932 /* Info.plist */,
+			);
+			path = PoChaTests;
+			sourceTree = "<group>";
+		};
+		18B6071F1C52354D00A79932 /* PoChaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				18B607201C52354D00A79932 /* PoChaUITests.swift */,
+				18B607221C52354D00A79932 /* Info.plist */,
+			);
+			path = PoChaUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		18B606FC1C52354D00A79932 /* PoCha */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18B607251C52354D00A79932 /* Build configuration list for PBXNativeTarget "PoCha" */;
+			buildPhases = (
+				18B606F91C52354D00A79932 /* Sources */,
+				18B606FA1C52354D00A79932 /* Frameworks */,
+				18B606FB1C52354D00A79932 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PoCha;
+			productName = PoCha;
+			productReference = 18B606FD1C52354D00A79932 /* PoCha.app */;
+			productType = "com.apple.product-type.application";
+		};
+		18B607101C52354D00A79932 /* PoChaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18B607281C52354D00A79932 /* Build configuration list for PBXNativeTarget "PoChaTests" */;
+			buildPhases = (
+				18B6070D1C52354D00A79932 /* Sources */,
+				18B6070E1C52354D00A79932 /* Frameworks */,
+				18B6070F1C52354D00A79932 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				18B607131C52354D00A79932 /* PBXTargetDependency */,
+			);
+			name = PoChaTests;
+			productName = PoChaTests;
+			productReference = 18B607111C52354D00A79932 /* PoChaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		18B6071B1C52354D00A79932 /* PoChaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18B6072B1C52354D00A79932 /* Build configuration list for PBXNativeTarget "PoChaUITests" */;
+			buildPhases = (
+				18B607181C52354D00A79932 /* Sources */,
+				18B607191C52354D00A79932 /* Frameworks */,
+				18B6071A1C52354D00A79932 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				18B6071E1C52354D00A79932 /* PBXTargetDependency */,
+			);
+			name = PoChaUITests;
+			productName = PoChaUITests;
+			productReference = 18B6071C1C52354D00A79932 /* PoChaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		18B606F51C52354D00A79932 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "向根";
+				TargetAttributes = {
+					18B606FC1C52354D00A79932 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					18B607101C52354D00A79932 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 18B606FC1C52354D00A79932;
+					};
+					18B6071B1C52354D00A79932 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 18B606FC1C52354D00A79932;
+					};
+				};
+			};
+			buildConfigurationList = 18B606F81C52354D00A79932 /* Build configuration list for PBXProject "PoCha" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 18B606F41C52354D00A79932;
+			productRefGroup = 18B606FE1C52354D00A79932 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				18B606FC1C52354D00A79932 /* PoCha */,
+				18B607101C52354D00A79932 /* PoChaTests */,
+				18B6071B1C52354D00A79932 /* PoChaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		18B606FB1C52354D00A79932 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18B6070B1C52354D00A79932 /* LaunchScreen.storyboard in Resources */,
+				18B607081C52354D00A79932 /* Assets.xcassets in Resources */,
+				18B607061C52354D00A79932 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18B6070F1C52354D00A79932 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18B6071A1C52354D00A79932 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		18B606F91C52354D00A79932 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18B607331C5280BC00A79932 /* BookTableViewController.swift in Sources */,
+				18B607311C523DA800A79932 /* BookTableViewCell.swift in Sources */,
+				18B607031C52354D00A79932 /* ViewController.swift in Sources */,
+				18B607011C52354D00A79932 /* AppDelegate.swift in Sources */,
+				18B6072F1C52369900A79932 /* Book.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18B6070D1C52354D00A79932 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18B607161C52354D00A79932 /* PoChaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18B607181C52354D00A79932 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18B607211C52354D00A79932 /* PoChaUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		18B607131C52354D00A79932 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 18B606FC1C52354D00A79932 /* PoCha */;
+			targetProxy = 18B607121C52354D00A79932 /* PBXContainerItemProxy */;
+		};
+		18B6071E1C52354D00A79932 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 18B606FC1C52354D00A79932 /* PoCha */;
+			targetProxy = 18B6071D1C52354D00A79932 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		18B607041C52354D00A79932 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18B607051C52354D00A79932 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		18B607091C52354D00A79932 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18B6070A1C52354D00A79932 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		18B607231C52354D00A79932 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		18B607241C52354D00A79932 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		18B607261C52354D00A79932 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PoCha/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.regulusxg.PoCha;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		18B607271C52354D00A79932 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PoCha/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.regulusxg.PoCha;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		18B607291C52354D00A79932 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PoChaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.regulusxg.PoChaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PoCha.app/PoCha";
+			};
+			name = Debug;
+		};
+		18B6072A1C52354D00A79932 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PoChaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.regulusxg.PoChaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PoCha.app/PoCha";
+			};
+			name = Release;
+		};
+		18B6072C1C52354D00A79932 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = PoChaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.regulusxg.PoChaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = PoCha;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		18B6072D1C52354D00A79932 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = PoChaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.regulusxg.PoChaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = PoCha;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		18B606F81C52354D00A79932 /* Build configuration list for PBXProject "PoCha" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18B607231C52354D00A79932 /* Debug */,
+				18B607241C52354D00A79932 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18B607251C52354D00A79932 /* Build configuration list for PBXNativeTarget "PoCha" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18B607261C52354D00A79932 /* Debug */,
+				18B607271C52354D00A79932 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		18B607281C52354D00A79932 /* Build configuration list for PBXNativeTarget "PoChaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18B607291C52354D00A79932 /* Debug */,
+				18B6072A1C52354D00A79932 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		18B6072B1C52354D00A79932 /* Build configuration list for PBXNativeTarget "PoChaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18B6072C1C52354D00A79932 /* Debug */,
+				18B6072D1C52354D00A79932 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 18B606F51C52354D00A79932 /* Project object */;
+}
