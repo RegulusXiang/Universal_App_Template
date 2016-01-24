@@ -34,5 +34,10 @@ class Book: NSObject {
         
     }
     
+    init(comment: String)
+    {
+        self.comment = comment
+    }
+    
 
 }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		187D70811C54DDC000F75BFB /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187D70801C54DDC000F75BFB /* DetailViewController.swift */; };
+		187D70831C552E7C00F75BFB /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187D70821C552E7C00F75BFB /* EditViewController.swift */; };
 		18B607011C52354D00A79932 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B607001C52354D00A79932 /* AppDelegate.swift */; };
 		18B607031C52354D00A79932 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B607021C52354D00A79932 /* ViewController.swift */; };
 		18B607061C52354D00A79932 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18B607041C52354D00A79932 /* Main.storyboard */; };
@@ -37,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		187D70801C54DDC000F75BFB /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		187D70821C552E7C00F75BFB /* EditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		18B606FD1C52354D00A79932 /* PoCha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PoCha.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18B607001C52354D00A79932 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18B607021C52354D00A79932 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +110,8 @@
 				18B607001C52354D00A79932 /* AppDelegate.swift */,
 				18B607021C52354D00A79932 /* ViewController.swift */,
 				18B607041C52354D00A79932 /* Main.storyboard */,
+				187D70801C54DDC000F75BFB /* DetailViewController.swift */,
+				187D70821C552E7C00F75BFB /* EditViewController.swift */,
 				18B607301C523DA800A79932 /* BookTableViewCell.swift */,
 				18B607321C5280BC00A79932 /* BookTableViewController.swift */,
 				18B6072E1C52369900A79932 /* Book.swift */,
@@ -202,6 +208,7 @@
 				TargetAttributes = {
 					18B606FC1C52354D00A79932 = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = YX8E934XPB;
 					};
 					18B607101C52354D00A79932 = {
 						CreatedOnToolsVersion = 7.1;
@@ -268,8 +275,10 @@
 				18B607331C5280BC00A79932 /* BookTableViewController.swift in Sources */,
 				18B607311C523DA800A79932 /* BookTableViewCell.swift in Sources */,
 				18B607031C52354D00A79932 /* ViewController.swift in Sources */,
+				187D70811C54DDC000F75BFB /* DetailViewController.swift in Sources */,
 				18B607011C52354D00A79932 /* AppDelegate.swift in Sources */,
 				18B6072F1C52369900A79932 /* Book.swift in Sources */,
+				187D70831C552E7C00F75BFB /* EditViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,6 +418,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = PoCha/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.regulusxg.PoCha;
@@ -420,6 +430,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = PoCha/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.regulusxg.PoCha;
@@ -494,6 +505,7 @@
 				18B607271C52354D00A79932 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		18B607281C52354D00A79932 /* Build configuration list for PBXNativeTarget "PoChaTests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +514,7 @@
 				18B6072A1C52354D00A79932 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		18B6072B1C52354D00A79932 /* Build configuration list for PBXNativeTarget "PoChaUITests" */ = {
 			isa = XCConfigurationList;
@@ -510,6 +523,7 @@
 				18B6072D1C52354D00A79932 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
