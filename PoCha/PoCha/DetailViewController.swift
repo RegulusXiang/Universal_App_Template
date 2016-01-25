@@ -61,10 +61,22 @@ class DetailViewController: UIViewController {
         
     }
     
-    @IBAction func unwindToBookList(sender: UIStoryboardSegue) {
+    @IBAction func unwindToDetailView(sender: UIStoryboardSegue) {
+        if let sourceViewController = sender.sourceViewController as? EditViewController {
+        //book = sourceViewController.book {
+            //Update an existing book
+            self.book = sourceViewController.book
+            
+            //Refresh the view, escpecially for the comment text field
+            //commentTextView.reloadInputViews()
+        }
+        
+        else {
+            //Add a new book
+            
+        }
         
     }
-
     
         
 }

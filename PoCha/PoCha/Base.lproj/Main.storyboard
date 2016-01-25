@@ -63,7 +63,7 @@
                     <navigationItem key="navigationItem" title="泼茶" id="hDC-T8-u65">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="tbe-xe-U6C">
                             <connections>
-                                <segue destination="RLY-HS-xi9" kind="show" id="nWN-RP-8HA"/>
+                                <segue destination="Nd9-Br-PYS" kind="show" id="Q5t-1I-cgP"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -71,6 +71,83 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9cs-lF-hUe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="522" y="334"/>
+        </scene>
+        <!--登录-->
+        <scene sceneID="stc-ea-X9N">
+            <objects>
+                <viewController id="Nd9-Br-PYS" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XTw-fa-hzT"/>
+                        <viewControllerLayoutGuide type="bottom" id="C84-RM-OLu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8B0-mW-sn7">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="B4k-PR-EQC">
+                                <rect key="frame" x="176" y="232" width="63" height="60"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="用户名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nwp-mx-mlB">
+                                        <rect key="frame" x="0.0" y="0.0" width="63" height="30"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MBS-jE-1Vo">
+                                        <rect key="frame" x="0.0" y="30" width="63" height="30"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <animations/>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lnb-PC-nTj">
+                                <rect key="frame" x="252" y="347" width="97" height="46"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="BAZ-6q-XjI"/>
+                                    <constraint firstAttribute="height" constant="46" id="hMk-IG-wuX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="登录"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="豆瓣账号登录" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HRM-D3-81Y">
+                                <rect key="frame" x="180" y="130" width="241" height="60"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="241" id="GHS-95-gt5"/>
+                                    <constraint firstAttribute="height" constant="60" id="yqR-5o-iJP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" red="0.23667480325255216" green="0.79685454842931935" blue="0.40468894448231857" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HRM-D3-81Y" firstAttribute="centerX" secondItem="8B0-mW-sn7" secondAttribute="centerX" id="2Ic-3K-ssq"/>
+                            <constraint firstItem="Lnb-PC-nTj" firstAttribute="centerX" secondItem="HRM-D3-81Y" secondAttribute="centerX" id="42i-Fi-iP0"/>
+                            <constraint firstItem="B4k-PR-EQC" firstAttribute="leading" secondItem="8B0-mW-sn7" secondAttribute="leading" constant="176" id="FQm-9X-e9u"/>
+                            <constraint firstItem="B4k-PR-EQC" firstAttribute="top" secondItem="HRM-D3-81Y" secondAttribute="bottom" constant="42" id="KNJ-7z-hnf"/>
+                            <constraint firstItem="HRM-D3-81Y" firstAttribute="top" secondItem="XTw-fa-hzT" secondAttribute="bottom" constant="66" id="dwM-fi-WKf"/>
+                            <constraint firstItem="C84-RM-OLu" firstAttribute="top" secondItem="Lnb-PC-nTj" secondAttribute="bottom" constant="163" id="fUw-tl-JVd"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="登录" id="I3p-d9-bkx">
+                        <barButtonItem key="rightBarButtonItem" title="Skip" id="nZV-fZ-PGD">
+                            <connections>
+                                <segue destination="RLY-HS-xi9" kind="show" id="NU1-Z0-L1Y"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="db5-kO-3nZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1258" y="745"/>
         </scene>
         <!--搜索-->
         <scene sceneID="dbO-W5-62b">
@@ -112,7 +189,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="1248" y="770"/>
+            <point key="canvasLocation" x="2073" y="745"/>
         </scene>
         <!--Title-->
         <scene sceneID="9Xh-kC-Qz4">
@@ -229,7 +306,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                             </textView>
                         </subviews>
                         <animations/>
@@ -244,7 +321,11 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Title" id="EDi-ag-hUg">
-                        <barButtonItem key="rightBarButtonItem" title="Done" id="RLU-ug-aZE"/>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="RLU-ug-aZE">
+                            <connections>
+                                <segue destination="1cg-WO-CPY" kind="unwind" unwindAction="unwindToDetailView:" id="WAh-Kp-r3a"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -254,6 +335,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ikn-gB-efG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="1cg-WO-CPY" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2073" y="-54"/>
         </scene>
