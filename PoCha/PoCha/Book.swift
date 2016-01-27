@@ -39,5 +39,12 @@ class Book: NSObject {
         self.comment = comment
     }
     
+    init(title: String, author: String, comment: String)
+    {
+        self.title = title
+        self.author = author
+        self.comment = comment
+    }
+    
 
 }

@@ -65,7 +65,7 @@ class BookTableViewController: UITableViewController {
         // Configure the cell...
         let book = books[indexPath.row]
         cell.titleLabel.text = book.title
-        cell.authorLabel.text = book.author
+        //cell.authorLabel.text = book.author
         cell.commentLabel.text = book.comment
 
         return cell
@@ -125,7 +125,28 @@ class BookTableViewController: UITableViewController {
                 bookDetailViewController.book = selectedBook
             }
         
+        }
     }
     
+    
+    @IBAction func unwindToBookList (sender: UIStoryboardSegue) {
+        
+        print("unwind function-1")
+        
+        if let sourceViewController = sender.sourceViewController as? AddViewController,
+            //bug located it's sourceViewController not destinationViewController
+        book = sourceViewController.book
+        {
+            print(book.title)
+            print(book.author)
+            print(book.comment)
+                
+            //Add a new book
+            let newIndexPath = NSIndexPath(forRow: books.count, inSection: 0)
+            books.append(book)
+            tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
+                
+        }
     }
+    
 }
