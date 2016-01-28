@@ -54,7 +54,7 @@
                                 <connections>
                                     <outlet property="commentLabel" destination="OGg-zO-sBo" id="ebp-ke-2wq"/>
                                     <outlet property="titleLabel" destination="Ha8-SD-lfP" id="ly7-E8-0yc"/>
-                                    <segue destination="Iv1-3e-2c1" kind="show" identifier="ShowDetail" id="JBT-pU-Pul"/>
+                                    <segue destination="wmQ-v7-Keg" kind="show" identifier="ShowDetail" id="yFw-sX-6lB"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -249,7 +249,7 @@
                     <navigationItem key="navigationItem" title="添加" id="mMk-oc-hAi">
                         <barButtonItem key="rightBarButtonItem" title="Done" id="vFG-C5-6Q9">
                             <connections>
-                                <segue destination="7BH-Wb-p9d" kind="unwind" unwindAction="unwindToBookList:" id="upC-KD-ftZ"/>
+                                <segue destination="7BH-Wb-p9d" kind="unwind" unwindAction="unwindFromAddViewToBookList:" id="6HO-F7-yUS"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -264,70 +264,6 @@
                 <exit id="7BH-Wb-p9d" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2780" y="745"/>
-        </scene>
-        <!--Title-->
-        <scene sceneID="9Xh-kC-Qz4">
-            <objects>
-                <viewController id="Iv1-3e-2c1" customClass="DetailViewController" customModule="PoCha" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="4QX-8L-r6K"/>
-                        <viewControllerLayoutGuide type="bottom" id="36e-f9-g4x"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Twz-VG-fNX">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="📚" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ApV-0X-4d0">
-                                <rect key="frame" x="20" y="96" width="30" height="33"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="titleLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="acb-Dg-3Y0">
-                                <rect key="frame" x="77" y="96" width="503" height="33"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zmM-6D-4Cr">
-                                <rect key="frame" x="20" y="149" width="560" height="401"/>
-                                <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                        </subviews>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="zmM-6D-4Cr" firstAttribute="leading" secondItem="Twz-VG-fNX" secondAttribute="leadingMargin" constant="10" id="6su-Di-CmE"/>
-                            <constraint firstItem="acb-Dg-3Y0" firstAttribute="trailing" secondItem="Twz-VG-fNX" secondAttribute="trailingMargin" id="hTK-Sr-c30"/>
-                            <constraint firstItem="zmM-6D-4Cr" firstAttribute="top" secondItem="acb-Dg-3Y0" secondAttribute="bottom" constant="20" id="jeM-5i-57T"/>
-                            <constraint firstItem="zmM-6D-4Cr" firstAttribute="trailing" secondItem="Twz-VG-fNX" secondAttribute="trailingMargin" constant="10" id="m8p-Fc-1Oe"/>
-                            <constraint firstItem="ApV-0X-4d0" firstAttribute="leading" secondItem="Twz-VG-fNX" secondAttribute="leadingMargin" id="xay-WL-e1G"/>
-                        </constraints>
-                    </view>
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Title" id="rH0-db-X2R">
-                        <barButtonItem key="rightBarButtonItem" title="Edit" id="NeV-9I-fAu">
-                            <connections>
-                                <segue destination="wmQ-v7-Keg" kind="show" identifier="EditComment" id="81C-dH-DDW"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="commentTextView" destination="zmM-6D-4Cr" id="GHR-Sf-bJy"/>
-                        <outlet property="editButton" destination="NeV-9I-fAu" id="0Nc-hU-VYy"/>
-                        <outlet property="titleLabel" destination="acb-Dg-3Y0" id="lnC-df-VGv"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Pwl-7P-aLF" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1258" y="-54"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="km5-Uf-n9t">
@@ -395,23 +331,23 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Title" id="EDi-ag-hUg">
-                        <barButtonItem key="rightBarButtonItem" title="Done" id="RLU-ug-aZE">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="blb-IA-Mva">
                             <connections>
-                                <segue destination="1cg-WO-CPY" kind="unwind" unwindAction="unwindToDetailView:" id="WAh-Kp-r3a"/>
+                                <segue destination="1cg-WO-CPY" kind="unwind" unwindAction="unwindFromEditViewToBookList:" id="7zd-SF-Pze"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="doneButton" destination="RLU-ug-aZE" id="oqU-r9-3c8"/>
                         <outlet property="editedTextView" destination="cii-U9-4Zi" id="6Et-zs-fjl"/>
                         <outlet property="editedTitleLabel" destination="xBN-La-ts9" id="Pbe-L2-QM5"/>
+                        <outlet property="saveButton" destination="blb-IA-Mva" id="NcQ-cg-II6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ikn-gB-efG" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="1cg-WO-CPY" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2073" y="-54"/>
+            <point key="canvasLocation" x="1258" y="13"/>
         </scene>
     </scenes>
 </document>

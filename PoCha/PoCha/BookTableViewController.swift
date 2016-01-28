@@ -34,8 +34,11 @@ class BookTableViewController: UITableViewController {
         // Use the edit button item provided by the table view controller.
         navigationItem.leftBarButtonItem = editButtonItem()
         
+        if let savedBooks = loadBooks() {
+            books += savedBooks
+        } else {
         loadSampleBooks()
-        
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -88,6 +91,8 @@ class BookTableViewController: UITableViewController {
             
             books.removeAtIndex(indexPath.row)
             
+            saveBooks()
+            
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
@@ -117,7 +122,7 @@ class BookTableViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         if segue.identifier == "ShowDetail"{
-            let bookDetailViewController = segue.destinationViewController as! DetailViewController
+            let bookDetailViewController = segue.destinationViewController as! EditViewController
             
             if let selectedBookCell = sender as? BookTableViewCell{
                 let indexPath = tableView.indexPathForCell(selectedBookCell)
@@ -129,7 +134,7 @@ class BookTableViewController: UITableViewController {
     }
     
     
-    @IBAction func unwindToBookList (sender: UIStoryboardSegue) {
+    @IBAction func unwindFromAddViewToBookList (sender: UIStoryboardSegue) {
         
         print("unwind function-1")
         
@@ -140,13 +145,44 @@ class BookTableViewController: UITableViewController {
             print(book.title)
             print(book.author)
             print(book.comment)
-                
+
             //Add a new book
             let newIndexPath = NSIndexPath(forRow: books.count, inSection: 0)
             books.append(book)
             tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
-                
+            
+            //Save the books
+            saveBooks()
         }
     }
+    
+    @IBAction func unwindFromEditViewToBookList (sender: UIStoryboardSegue) {
+        print("unwind function-2")
+        
+        if let sourceViewController = sender.sourceViewController as? EditViewController,
+            book = sourceViewController.book {
+                //Update a existing book
+                if let selectedIndexPath = tableView.indexPathForSelectedRow {
+                    books[selectedIndexPath.row] = book
+                    tableView.reloadRowsAtIndexPaths([selectedIndexPath], withRowAnimation: .None)
+                }
+                
+                //Save the books
+                saveBooks()
+        }
+    }
+    
+    //MARK: NSCoding
+    func saveBooks() {
+        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(books, toFile: Book.ArchiveURL.path!)
+        if !isSuccessfulSave {
+            print("Failed to save books...")
+        }
+    }
+    
+    func loadBooks() -> [Book]? {
+    return NSKeyedUnarchiver.unarchiveObjectWithFile(Book.ArchiveURL.path!) as? [Book]
+    }
+    
     
 }

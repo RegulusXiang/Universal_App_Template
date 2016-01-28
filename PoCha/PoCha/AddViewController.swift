@@ -25,6 +25,13 @@ class AddViewController: UIViewController, UITextViewDelegate, UITextFieldDelega
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        addTitleTextField.delegate = self
+        addAuthorTextField.delegate = self
+        //addCommentTextView.delegate = self
+        
+        checkValidBookTitle()
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,7 +39,22 @@ class AddViewController: UIViewController, UITextViewDelegate, UITextFieldDelega
         // Dispose of any resources that can be recreated.
     }
     
-
+    func textFieldDidBeginEditing(textField: UITextField) {
+        //Disable Done button while editing
+        addDoneButton.enabled = false
+    }
+    
+    func textFieldDidEndEditing(textField: UITextField) {
+        checkValidBookTitle()
+        navigationItem.title = addTitleTextField.text
+    }
+    
+    func checkValidBookTitle() {
+        //Diable the Done button if the book title is empty
+        let text = addTitleTextField.text ?? ""
+        addDoneButton.enabled = !text.isEmpty
+    }
+    
     
     // MARK: - Navigation
 

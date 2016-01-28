@@ -14,7 +14,9 @@ class EditViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var editedTitleLabel: UILabel!
     @IBOutlet weak var editedTextView: UITextView!
     
-    @IBOutlet weak var doneButton: UIBarButtonItem!
+    @IBOutlet weak var saveButton: UIBarButtonItem!
+    
+    //@IBOutlet weak var doneButton: UIBarButtonItem!
     
     var book: Book?
 
@@ -48,13 +50,20 @@ class EditViewController: UIViewController, UITextViewDelegate {
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
+        if saveButton === sender {
+            let title = editedTitleLabel.text
+            let author = book!.author
+            let comment = editedTextView.text ?? ""
+            
+            book = Book(title:title!,author:author,comment: comment)
+        }
     }
-    */
+    
 
 }
