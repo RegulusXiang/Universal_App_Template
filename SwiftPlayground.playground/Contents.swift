@@ -64,6 +64,29 @@ greet("Regulus", day: "Friday")
 print(greet("R", day: "test"))
 
 
+print("hello")
+
+
+//var url = NSURL(string: "https://api.douban.com/v2/book/search?q=小王子")
+//var str: AnyObject! = NSString.stringWithContentsofURL(url)
+//print(str)
+
+let session = NSURLSession.sharedSession()
+let request = NSURLRequest(URL: NSURL(string: "https://api.douban.com/v2/book/1003078")!)
+let task = session.dataTaskWithRequest(request, completionHandler: { (data, response, error) -> Void in
+    let string = NSString(data: data!, encoding: NSUTF8StringEncoding)
+    print(string)
+})
+task.resume()
+
+
+
+
+
+
+
+
+
 
 
 

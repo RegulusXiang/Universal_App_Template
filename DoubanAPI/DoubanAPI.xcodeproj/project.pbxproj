@@ -15,6 +15,8 @@
 		18FCD7AC1C60D07C00A03A6E /* DoubanAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FCD7AB1C60D07C00A03A6E /* DoubanAPITests.swift */; };
 		18FCD7B71C60D07D00A03A6E /* DoubanAPIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FCD7B61C60D07D00A03A6E /* DoubanAPIUITests.swift */; };
 		18FCD7C51C60D11900A03A6E /* Douban_API_v2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FCD7C41C60D11900A03A6E /* Douban_API_v2.swift */; };
+		9F1AD4E51C92DA37007BB05E /* DoubanBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1AD4E41C92DA37007BB05E /* DoubanBook.swift */; };
+		9F1AD4ED1C92F83C007BB05E /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1AD4EC1C92F83C007BB05E /* SwiftyJSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		18FCD7B61C60D07D00A03A6E /* DoubanAPIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubanAPIUITests.swift; sourceTree = "<group>"; };
 		18FCD7B81C60D07D00A03A6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18FCD7C41C60D11900A03A6E /* Douban_API_v2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Douban_API_v2.swift; sourceTree = "<group>"; };
+		9F1AD4E41C92DA37007BB05E /* DoubanBook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubanBook.swift; sourceTree = "<group>"; };
+		9F1AD4EC1C92F83C007BB05E /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = ../../../../Desktop/SwiftyJSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +103,9 @@
 		18FCD7951C60D07C00A03A6E /* DoubanAPI */ = {
 			isa = PBXGroup;
 			children = (
+				9F1AD4EC1C92F83C007BB05E /* SwiftyJSON.swift */,
 				18FCD7961C60D07C00A03A6E /* AppDelegate.swift */,
+				9F1AD4E41C92DA37007BB05E /* DoubanBook.swift */,
 				18FCD7C41C60D11900A03A6E /* Douban_API_v2.swift */,
 				18FCD7981C60D07C00A03A6E /* ViewController.swift */,
 				18FCD79A1C60D07C00A03A6E /* Main.storyboard */,
@@ -265,6 +271,8 @@
 				18FCD7C51C60D11900A03A6E /* Douban_API_v2.swift in Sources */,
 				18FCD7991C60D07C00A03A6E /* ViewController.swift in Sources */,
 				18FCD7971C60D07C00A03A6E /* AppDelegate.swift in Sources */,
+				9F1AD4ED1C92F83C007BB05E /* SwiftyJSON.swift in Sources */,
+				9F1AD4E51C92DA37007BB05E /* DoubanBook.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -489,6 +497,7 @@
 				18FCD7BD1C60D07D00A03A6E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		18FCD7BE1C60D07D00A03A6E /* Build configuration list for PBXNativeTarget "DoubanAPITests" */ = {
 			isa = XCConfigurationList;
@@ -497,6 +506,7 @@
 				18FCD7C01C60D07D00A03A6E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		18FCD7C11C60D07D00A03A6E /* Build configuration list for PBXNativeTarget "DoubanAPIUITests" */ = {
 			isa = XCConfigurationList;
@@ -505,6 +515,7 @@
 				18FCD7C31C60D07D00A03A6E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
