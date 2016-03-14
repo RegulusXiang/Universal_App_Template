@@ -8,35 +8,35 @@
 
 import UIKit
 
-struct DoubanImage {
-    var small: String
-    var large: String
-    var medium: String
-}
+//struct DoubanImage {
+//    var small: String
+//    var large: String
+//    var medium: String
+//}
 
-struct DoubanBookRating {
-    var max: Int
-    var numRates: Int
-    var average: Double
-    var min: Int
-}
+//struct DoubanBookRating {
+//    var max: Int
+//    var numRates: Int
+//    var average: Double
+//    var min: Int
+//}
 
 struct DoubanBookTag {
     var count: Int
     var name: String
 }
 
-struct DoubanBookSeries {
-    var id: Int
-    var title: String
-}
+//struct DoubanBookSeries {
+//    var id: Int
+//    var title: String
+//}
 
 class DoubanBook: NSObject {
     
     //MARK: Properties
-    var id: Double = 0
-    var isbn10: Double = 0
-    var isbn13: Double = 0
+    var id: String = ""
+    var isbn10: String = ""
+    var isbn13: String = ""
     var title: String = ""
     var origin_title: String = ""
     var alt_title: String = ""
@@ -45,20 +45,26 @@ class DoubanBook: NSObject {
     var alt: String = ""
     var image: String = ""
     
-    //var images: DoubanImage
+    //images字典存储大中小三个尺寸的图书图片
+    var images:[String:String] = ["small":"","large":"","medium":""]
     
     var author: String = ""
     var translator: String = ""
     var publisher: String = ""
     var pubdate: String = ""
     
-    //var rating: Rating
-    //var tags: Tag
+    //rating字典
+    var rating:[String: Double] = ["max":0.0,"numRaters":0.0,"average":0.0,"min":0.0]
+    
+    //tags由结构元素构成的数组
+    //var tag:[String:String] = ["count":"","name":""]
+    //var tags:[DoubanBookTag]
     
     var binding: String = ""
     var price: Double = 0.0
     
-    //var series: Series
+    //series字典，注意时冒号不是逗号！！！
+    var series:[String:String] = ["id":"","title":""]
     
     var pages: Int = 0
     
@@ -67,6 +73,7 @@ class DoubanBook: NSObject {
     var catalog: String = ""
     var ebook_url: String = ""
     var ebook_price: Double = 0.0
+    
     
 
 }

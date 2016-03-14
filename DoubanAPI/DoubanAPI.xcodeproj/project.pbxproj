@@ -16,7 +16,10 @@
 		18FCD7B71C60D07D00A03A6E /* DoubanAPIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FCD7B61C60D07D00A03A6E /* DoubanAPIUITests.swift */; };
 		18FCD7C51C60D11900A03A6E /* Douban_API_v2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FCD7C41C60D11900A03A6E /* Douban_API_v2.swift */; };
 		9F1AD4E51C92DA37007BB05E /* DoubanBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1AD4E41C92DA37007BB05E /* DoubanBook.swift */; };
-		9F1AD4ED1C92F83C007BB05E /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1AD4EC1C92F83C007BB05E /* SwiftyJSON.swift */; };
+		9FF7756D1C954B6C00CC5310 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF7756C1C954B6C00CC5310 /* SwiftyJSON.swift */; };
+		9FF775861C9553AA00CC5310 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FF775791C9552CD00CC5310 /* SwiftyJSON.framework */; };
+		9FF775871C9553AA00CC5310 /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9FF775791C9552CD00CC5310 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9FF7758C1C96C19100CC5310 /* DoubanBookCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF7758B1C96C19100CC5310 /* DoubanBookCollection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,7 +37,77 @@
 			remoteGlobalIDString = 18FCD7921C60D07C00A03A6E;
 			remoteInfo = DoubanAPI;
 		};
+		9FF775781C9552CD00CC5310 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9FF7756E1C9552CD00CC5310 /* SwiftyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2E4FEFDB19575BE100351305;
+			remoteInfo = "SwiftyJSON iOS";
+		};
+		9FF7757A1C9552CD00CC5310 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9FF7756E1C9552CD00CC5310 /* SwiftyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2E4FEFE619575BE100351305;
+			remoteInfo = "SwiftyJSON iOS Tests";
+		};
+		9FF7757C1C9552CD00CC5310 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9FF7756E1C9552CD00CC5310 /* SwiftyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9C7DFC5B1A9102BD005AA3F7;
+			remoteInfo = "SwiftyJSON OSX";
+		};
+		9FF7757E1C9552CD00CC5310 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9FF7756E1C9552CD00CC5310 /* SwiftyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9C7DFC651A9102BD005AA3F7;
+			remoteInfo = "SwiftyJSON OSX Tests";
+		};
+		9FF775801C9552CD00CC5310 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9FF7756E1C9552CD00CC5310 /* SwiftyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E4D7CCE81B9465A700EE7221;
+			remoteInfo = "SwiftyJSON watchOS";
+		};
+		9FF775821C9552CD00CC5310 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9FF7756E1C9552CD00CC5310 /* SwiftyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7236B4F61BAC14150020529B;
+			remoteInfo = "SwiftyJSON tvOS";
+		};
+		9FF775841C9552CD00CC5310 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9FF7756E1C9552CD00CC5310 /* SwiftyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A8580F741BCF5C5B00DA927B;
+			remoteInfo = "SwiftyJSON tvOS Tests";
+		};
+		9FF775881C9553AA00CC5310 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9FF7756E1C9552CD00CC5310 /* SwiftyJSON.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 2E4FEFDA19575BE100351305;
+			remoteInfo = "SwiftyJSON iOS";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9FF7758A1C9553AA00CC5310 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9FF775871C9553AA00CC5310 /* SwiftyJSON.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		18FCD7931C60D07C00A03A6E /* DoubanAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoubanAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,7 +125,9 @@
 		18FCD7B81C60D07D00A03A6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18FCD7C41C60D11900A03A6E /* Douban_API_v2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Douban_API_v2.swift; sourceTree = "<group>"; };
 		9F1AD4E41C92DA37007BB05E /* DoubanBook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubanBook.swift; sourceTree = "<group>"; };
-		9F1AD4EC1C92F83C007BB05E /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = ../../../../Desktop/SwiftyJSON.swift; sourceTree = "<group>"; };
+		9FF7756C1C954B6C00CC5310 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = "../../../SwiftyJSON-master副本/Source/SwiftyJSON.swift"; sourceTree = "<group>"; };
+		9FF7756E1C9552CD00CC5310 /* SwiftyJSON.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftyJSON.xcodeproj; path = ../SwiftyJSON/SwiftyJSON.xcodeproj; sourceTree = "<group>"; };
+		9FF7758B1C96C19100CC5310 /* DoubanBookCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubanBookCollection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +135,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FF775861C9553AA00CC5310 /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +159,7 @@
 		18FCD78A1C60D07C00A03A6E = {
 			isa = PBXGroup;
 			children = (
+				9FF7756E1C9552CD00CC5310 /* SwiftyJSON.xcodeproj */,
 				18FCD7951C60D07C00A03A6E /* DoubanAPI */,
 				18FCD7AA1C60D07C00A03A6E /* DoubanAPITests */,
 				18FCD7B51C60D07D00A03A6E /* DoubanAPIUITests */,
@@ -103,15 +180,16 @@
 		18FCD7951C60D07C00A03A6E /* DoubanAPI */ = {
 			isa = PBXGroup;
 			children = (
-				9F1AD4EC1C92F83C007BB05E /* SwiftyJSON.swift */,
 				18FCD7961C60D07C00A03A6E /* AppDelegate.swift */,
 				9F1AD4E41C92DA37007BB05E /* DoubanBook.swift */,
+				9FF7758B1C96C19100CC5310 /* DoubanBookCollection.swift */,
 				18FCD7C41C60D11900A03A6E /* Douban_API_v2.swift */,
 				18FCD7981C60D07C00A03A6E /* ViewController.swift */,
 				18FCD79A1C60D07C00A03A6E /* Main.storyboard */,
 				18FCD79D1C60D07C00A03A6E /* Assets.xcassets */,
 				18FCD79F1C60D07C00A03A6E /* LaunchScreen.storyboard */,
 				18FCD7A21C60D07C00A03A6E /* Info.plist */,
+				9FF7756C1C954B6C00CC5310 /* SwiftyJSON.swift */,
 			);
 			path = DoubanAPI;
 			sourceTree = "<group>";
@@ -134,6 +212,20 @@
 			path = DoubanAPIUITests;
 			sourceTree = "<group>";
 		};
+		9FF7756F1C9552CD00CC5310 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9FF775791C9552CD00CC5310 /* SwiftyJSON.framework */,
+				9FF7757B1C9552CD00CC5310 /* SwiftyJSON iOS Tests.xctest */,
+				9FF7757D1C9552CD00CC5310 /* SwiftyJSON.framework */,
+				9FF7757F1C9552CD00CC5310 /* SwiftyJSON OSX Tests.xctest */,
+				9FF775811C9552CD00CC5310 /* SwiftyJSON.framework */,
+				9FF775831C9552CD00CC5310 /* SwiftyJSON.framework */,
+				9FF775851C9552CD00CC5310 /* SwiftyJSON tvOS Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -144,10 +236,12 @@
 				18FCD78F1C60D07C00A03A6E /* Sources */,
 				18FCD7901C60D07C00A03A6E /* Frameworks */,
 				18FCD7911C60D07C00A03A6E /* Resources */,
+				9FF7758A1C9553AA00CC5310 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				9FF775891C9553AA00CC5310 /* PBXTargetDependency */,
 			);
 			name = DoubanAPI;
 			productName = DoubanAPI;
@@ -227,6 +321,12 @@
 			mainGroup = 18FCD78A1C60D07C00A03A6E;
 			productRefGroup = 18FCD7941C60D07C00A03A6E /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 9FF7756F1C9552CD00CC5310 /* Products */;
+					ProjectRef = 9FF7756E1C9552CD00CC5310 /* SwiftyJSON.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				18FCD7921C60D07C00A03A6E /* DoubanAPI */,
@@ -235,6 +335,58 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		9FF775791C9552CD00CC5310 /* SwiftyJSON.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftyJSON.framework;
+			remoteRef = 9FF775781C9552CD00CC5310 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9FF7757B1C9552CD00CC5310 /* SwiftyJSON iOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SwiftyJSON iOS Tests.xctest";
+			remoteRef = 9FF7757A1C9552CD00CC5310 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9FF7757D1C9552CD00CC5310 /* SwiftyJSON.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftyJSON.framework;
+			remoteRef = 9FF7757C1C9552CD00CC5310 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9FF7757F1C9552CD00CC5310 /* SwiftyJSON OSX Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SwiftyJSON OSX Tests.xctest";
+			remoteRef = 9FF7757E1C9552CD00CC5310 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9FF775811C9552CD00CC5310 /* SwiftyJSON.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftyJSON.framework;
+			remoteRef = 9FF775801C9552CD00CC5310 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9FF775831C9552CD00CC5310 /* SwiftyJSON.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftyJSON.framework;
+			remoteRef = 9FF775821C9552CD00CC5310 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9FF775851C9552CD00CC5310 /* SwiftyJSON tvOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SwiftyJSON tvOS Tests.xctest";
+			remoteRef = 9FF775841C9552CD00CC5310 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		18FCD7911C60D07C00A03A6E /* Resources */ = {
@@ -271,8 +423,9 @@
 				18FCD7C51C60D11900A03A6E /* Douban_API_v2.swift in Sources */,
 				18FCD7991C60D07C00A03A6E /* ViewController.swift in Sources */,
 				18FCD7971C60D07C00A03A6E /* AppDelegate.swift in Sources */,
-				9F1AD4ED1C92F83C007BB05E /* SwiftyJSON.swift in Sources */,
+				9FF7756D1C954B6C00CC5310 /* SwiftyJSON.swift in Sources */,
 				9F1AD4E51C92DA37007BB05E /* DoubanBook.swift in Sources */,
+				9FF7758C1C96C19100CC5310 /* DoubanBookCollection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +457,11 @@
 			isa = PBXTargetDependency;
 			target = 18FCD7921C60D07C00A03A6E /* DoubanAPI */;
 			targetProxy = 18FCD7B31C60D07D00A03A6E /* PBXContainerItemProxy */;
+		};
+		9FF775891C9553AA00CC5310 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "SwiftyJSON iOS";
+			targetProxy = 9FF775881C9553AA00CC5310 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -412,6 +570,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = DoubanAPI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.regulusxg.DoubanAPI;
@@ -423,6 +582,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = DoubanAPI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.regulusxg.DoubanAPI;
