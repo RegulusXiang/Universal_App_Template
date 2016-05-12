@@ -20,6 +20,13 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    //自定义navigation bar样式
+    override func viewDidAppear(animated: Bool) {
+        var nav = self.navigationController?.navigationBar
+        
+        nav?.barStyle = UIBarStyle.Black
+        nav?.tintColor = UIColor.greenColor()
+    }
 
 }
 

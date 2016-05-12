@@ -17,12 +17,12 @@ class BookTableViewController: UITableViewController {
     
     func loadSampleBooks()
     {
-        let sampleBook = Book(title: "小王子",
+        let sampleBook = Book(title: "纳兰词",
             author: "（法）圣埃克苏佩里",
             publisher: "中国友谊出版公司",
-            author_intro: "圣埃克苏佩里（1900－1944）1900年，尼采逝世。这一年，安德烈・纪德在布鲁塞尔一次会议上宣称：“当今文学土地的面貌可以说是一片沼泽。”1900年，圣埃克苏佩里诞生。净化沼泽的意愿和能力历史地落在这个“世纪儿”的身上，圣埃克苏佩里是尼采式的第二代法国作家，拿但业的儿子，琐罗亚斯德的孙子，这个飞行员受到极大的遗传影响。灾种影响使他在探索、忧虑和英雄主义的道路上走到尽头。如尼采所说：“你应该超截止自己，走得更远，登得更高，直至群星在你脚下。”尼采成为他座舱中想象的伙伴。这个飞越沙漠和海洋的年轻驾驶员同样也遵循着纪德的教诲：“与其过宁静的生活，不如过悲怆的生活。”圣埃克苏佩里在他整个的一生中都在反复思考力量和热诚的真谛。",
-            summary: "小王子驾到！大家好，我是小王子，生活在B612星球，别看我是王子出生，我要做的事也不少，有时给花浇水，有时我还得耐心地把火山口通一通。实在闷得发慌的时候，为了找些事做，学点东西，我也访问一些其他的星球，像325号、326号、327号之类的。当然，我经历的事情也不少，有开心的，也有不开心的。这些事我通常会向地球上一个叫圣埃克苏佩里的人倾诉。对了，你可不要小瞧他，他是拿但业的儿子，琐罗亚斯德的孙子。他还被人们认为尼采式的第二代法国作家。他一生有两大爱好：飞行和写作。我之所以能够这样受欢迎也是他的功劳。因为他把我在其他星球的所见所闻编成了一本小书，也就是你们即将看到的这一本。它不但被誉为有史以来阅读仅次于《圣经》的书，全球发行的语言更是超过100种。可惜的是，在这本书出版后没多久，他在一次架机执行任务时一去不复返了，没有人知道他去了哪里。",
-            comment: "没有什么好说的")
+            author_intro: "圣埃克苏佩里",
+            summary: "小王子驾到！",
+            comment: "读书消得泼茶香，当时只道是寻常。")
     
         books.insert(sampleBook!, atIndex: books.count)
         
@@ -40,6 +40,25 @@ class BookTableViewController: UITableViewController {
         loadSampleBooks()
         }
     }
+    
+    //自定义navigation bar样式，由于BookTableViewController的root view controller为
+    //navigation controller，故在此处对其进行自定义
+    override func viewDidAppear(animated: Bool) {
+        var nav = self.navigationController?.navigationBar
+        
+        //nav?.barStyle = UIBarStyle.BlackTranslucent
+        
+        let barColor = UIColor(red: 0x36/255.0, green: 0x74/255.0, blue: 0x59/255.0, alpha: 1.0)
+        //nav?.titleTextAttributes ＝ UIColor.greenColor()
+        //按钮文字颜色
+        nav?.tintColor = UIColor.whiteColor()
+        //bar背景颜色
+        nav?.barTintColor = barColor
+        //设置标题颜色,设置标题字体，使用第三方字体库
+        nav?.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor(), NSFontAttributeName:UIFont(name: "Wyue-GutiFangsong-NC", size: 24.0)!];
+        
+    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

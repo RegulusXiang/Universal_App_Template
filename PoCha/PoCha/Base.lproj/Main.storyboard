@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="k1A-EL-hX9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="k1A-EL-hX9">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
@@ -143,7 +143,7 @@
         <!--搜索-->
         <scene sceneID="dbO-W5-62b">
             <objects>
-                <viewController id="RLY-HS-xi9" sceneMemberID="viewController">
+                <viewController id="RLY-HS-xi9" customClass="SearchViewController" customModule="PoCha" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tQC-VT-Rba"/>
                         <viewControllerLayoutGuide type="bottom" id="j7d-0z-V7L"/>
@@ -152,19 +152,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" ambiguous="YES" misplaced="YES" placeholder="输入书籍名" translatesAutoresizingMaskIntoConstraints="NO" id="4SA-P8-7fc">
+                            <searchBar contentMode="redraw" ambiguous="YES" misplaced="YES" placeholder="输入书籍名" translatesAutoresizingMaskIntoConstraints="NO" id="LLq-VT-WqL">
                                 <rect key="frame" x="0.0" y="64" width="600" height="44"/>
                                 <animations/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="RLY-HS-xi9" id="Hy2-9J-80U"/>
-                                </connections>
+                                <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
                             </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="H4i-Io-Ud4">
+                                <rect key="frame" x="0.0" y="108" width="600" height="492"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AnnotationTableViewCell" id="gFb-KS-gsG" customClass="BookTableViewCell" customModule="PoCha" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gFb-KS-gsG" id="qDv-d0-Ocv">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <animations/>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="4SA-P8-7fc" firstAttribute="centerX" secondItem="9TU-Ux-NIj" secondAttribute="centerX" id="B44-ol-SRn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LLq-VT-WqL" secondAttribute="trailing" constant="-20" id="EsP-k4-vil"/>
+                            <constraint firstItem="LLq-VT-WqL" firstAttribute="leading" secondItem="9TU-Ux-NIj" secondAttribute="leadingMargin" constant="-20" id="bdp-dM-WEg"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="搜索" id="HfM-nc-jPy">
@@ -175,19 +194,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="searchDisplayController" destination="4fd-gS-P55" id="wmL-by-vK4"/>
+                        <outlet property="searchBar" destination="LLq-VT-WqL" id="lN3-aj-Ie2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uG4-EV-VmD" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="4fd-gS-P55">
-                    <connections>
-                        <outlet property="delegate" destination="RLY-HS-xi9" id="0mj-QQ-SBP"/>
-                        <outlet property="searchBar" destination="4SA-P8-7fc" id="qFR-k7-fs3"/>
-                        <outlet property="searchContentsController" destination="RLY-HS-xi9" id="eLO-gn-szw"/>
-                        <outlet property="searchResultsDataSource" destination="RLY-HS-xi9" id="jwQ-PQ-hA9"/>
-                        <outlet property="searchResultsDelegate" destination="RLY-HS-xi9" id="p4A-Qr-d7M"/>
-                    </connections>
-                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="2073" y="745"/>
         </scene>

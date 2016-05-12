@@ -22,6 +22,14 @@
 		18B6072F1C52369900A79932 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B6072E1C52369900A79932 /* Book.swift */; };
 		18B607311C523DA800A79932 /* BookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B607301C523DA800A79932 /* BookTableViewCell.swift */; };
 		18B607331C5280BC00A79932 /* BookTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B607321C5280BC00A79932 /* BookTableViewController.swift */; };
+		9FBB23C21CDB1C1800F6950C /* Wyue-GutiFangsong-NC.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9FBB23C11CDB1C1800F6950C /* Wyue-GutiFangsong-NC.otf */; };
+		9FBB23C31CDB1C1800F6950C /* Wyue-GutiFangsong-NC.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9FBB23C11CDB1C1800F6950C /* Wyue-GutiFangsong-NC.otf */; };
+		9FBB23C41CDB1C1800F6950C /* Wyue-GutiFangsong-NC.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9FBB23C11CDB1C1800F6950C /* Wyue-GutiFangsong-NC.otf */; };
+		9FBB23C51CDB1D3800F6950C /* Wyue-GutiFangsong-NC.otf in Sources */ = {isa = PBXBuildFile; fileRef = 9FBB23C11CDB1C1800F6950C /* Wyue-GutiFangsong-NC.otf */; };
+		9FBB24051CE1AF0A00F6950C /* DoubanAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBB24041CE1AF0A00F6950C /* DoubanAnnotation.swift */; };
+		9FBB24081CE1C22E00F6950C /* DoubanSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBB24071CE1C22D00F6950C /* DoubanSearch.swift */; };
+		9FBB24241CE1C5F700F6950C /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FBB24171CE1C4AF00F6950C /* SwiftyJSON.framework */; };
+		9FBB24251CE1C5F700F6950C /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9FBB24171CE1C4AF00F6950C /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +47,77 @@
 			remoteGlobalIDString = 18B606FC1C52354D00A79932;
 			remoteInfo = PoCha;
 		};
+		9FBB24161CE1C4AF00F6950C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9FBB240C1CE1C4AF00F6950C /* SwiftyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2E4FEFDB19575BE100351305;
+			remoteInfo = "SwiftyJSON iOS";
+		};
+		9FBB24181CE1C4AF00F6950C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9FBB240C1CE1C4AF00F6950C /* SwiftyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2E4FEFE619575BE100351305;
+			remoteInfo = "SwiftyJSON iOS Tests";
+		};
+		9FBB241A1CE1C4AF00F6950C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9FBB240C1CE1C4AF00F6950C /* SwiftyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9C7DFC5B1A9102BD005AA3F7;
+			remoteInfo = "SwiftyJSON OSX";
+		};
+		9FBB241C1CE1C4AF00F6950C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9FBB240C1CE1C4AF00F6950C /* SwiftyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9C7DFC651A9102BD005AA3F7;
+			remoteInfo = "SwiftyJSON OSX Tests";
+		};
+		9FBB241E1CE1C4AF00F6950C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9FBB240C1CE1C4AF00F6950C /* SwiftyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E4D7CCE81B9465A700EE7221;
+			remoteInfo = "SwiftyJSON watchOS";
+		};
+		9FBB24201CE1C4AF00F6950C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9FBB240C1CE1C4AF00F6950C /* SwiftyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7236B4F61BAC14150020529B;
+			remoteInfo = "SwiftyJSON tvOS";
+		};
+		9FBB24221CE1C4AF00F6950C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9FBB240C1CE1C4AF00F6950C /* SwiftyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A8580F741BCF5C5B00DA927B;
+			remoteInfo = "SwiftyJSON tvOS Tests";
+		};
+		9FBB24261CE1C5F700F6950C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9FBB240C1CE1C4AF00F6950C /* SwiftyJSON.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 2E4FEFDA19575BE100351305;
+			remoteInfo = "SwiftyJSON iOS";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9FBB24281CE1C5F700F6950C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9FBB24251CE1C5F700F6950C /* SwiftyJSON.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		187D70801C54DDC000F75BFB /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +141,10 @@
 		18B6072E1C52369900A79932 /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		18B607301C523DA800A79932 /* BookTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookTableViewCell.swift; sourceTree = "<group>"; };
 		18B607321C5280BC00A79932 /* BookTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookTableViewController.swift; sourceTree = "<group>"; };
+		9FBB23C11CDB1C1800F6950C /* Wyue-GutiFangsong-NC.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Wyue-GutiFangsong-NC.otf"; sourceTree = "<group>"; };
+		9FBB24041CE1AF0A00F6950C /* DoubanAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubanAnnotation.swift; sourceTree = "<group>"; };
+		9FBB24071CE1C22D00F6950C /* DoubanSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubanSearch.swift; sourceTree = "<group>"; };
+		9FBB240C1CE1C4AF00F6950C /* SwiftyJSON.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftyJSON.xcodeproj; path = ../../SwiftyJSON/SwiftyJSON.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +152,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FBB24241CE1C5F700F6950C /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +176,7 @@
 		18B606F41C52354D00A79932 = {
 			isa = PBXGroup;
 			children = (
+				9FBB240C1CE1C4AF00F6950C /* SwiftyJSON.xcodeproj */,
 				18B606FF1C52354D00A79932 /* PoCha */,
 				18B607141C52354D00A79932 /* PoChaTests */,
 				18B6071F1C52354D00A79932 /* PoChaUITests */,
@@ -117,6 +201,7 @@
 				18B607021C52354D00A79932 /* ViewController.swift */,
 				18B607041C52354D00A79932 /* Main.storyboard */,
 				18B311D71C5A50F3001774E9 /* SearchViewController.swift */,
+				9FBB24071CE1C22D00F6950C /* DoubanSearch.swift */,
 				18B311D51C579D26001774E9 /* AddViewController.swift */,
 				187D70841C5681E400F75BFB /* LoginViewController.swift */,
 				187D70801C54DDC000F75BFB /* DetailViewController.swift */,
@@ -124,9 +209,11 @@
 				18B607301C523DA800A79932 /* BookTableViewCell.swift */,
 				18B607321C5280BC00A79932 /* BookTableViewController.swift */,
 				18B6072E1C52369900A79932 /* Book.swift */,
+				9FBB24041CE1AF0A00F6950C /* DoubanAnnotation.swift */,
 				18B607071C52354D00A79932 /* Assets.xcassets */,
 				18B607091C52354D00A79932 /* LaunchScreen.storyboard */,
 				18B6070C1C52354D00A79932 /* Info.plist */,
+				9FBB23C11CDB1C1800F6950C /* Wyue-GutiFangsong-NC.otf */,
 			);
 			path = PoCha;
 			sourceTree = "<group>";
@@ -149,6 +236,20 @@
 			path = PoChaUITests;
 			sourceTree = "<group>";
 		};
+		9FBB240D1CE1C4AF00F6950C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9FBB24171CE1C4AF00F6950C /* SwiftyJSON.framework */,
+				9FBB24191CE1C4AF00F6950C /* SwiftyJSON iOS Tests.xctest */,
+				9FBB241B1CE1C4AF00F6950C /* SwiftyJSON.framework */,
+				9FBB241D1CE1C4AF00F6950C /* SwiftyJSON OSX Tests.xctest */,
+				9FBB241F1CE1C4AF00F6950C /* SwiftyJSON.framework */,
+				9FBB24211CE1C4AF00F6950C /* SwiftyJSON.framework */,
+				9FBB24231CE1C4AF00F6950C /* SwiftyJSON tvOS Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -159,10 +260,12 @@
 				18B606F91C52354D00A79932 /* Sources */,
 				18B606FA1C52354D00A79932 /* Frameworks */,
 				18B606FB1C52354D00A79932 /* Resources */,
+				9FBB24281CE1C5F700F6950C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				9FBB24271CE1C5F700F6950C /* PBXTargetDependency */,
 			);
 			name = PoCha;
 			productName = PoCha;
@@ -240,6 +343,12 @@
 			mainGroup = 18B606F41C52354D00A79932;
 			productRefGroup = 18B606FE1C52354D00A79932 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 9FBB240D1CE1C4AF00F6950C /* Products */;
+					ProjectRef = 9FBB240C1CE1C4AF00F6950C /* SwiftyJSON.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				18B606FC1C52354D00A79932 /* PoCha */,
@@ -249,11 +358,64 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		9FBB24171CE1C4AF00F6950C /* SwiftyJSON.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftyJSON.framework;
+			remoteRef = 9FBB24161CE1C4AF00F6950C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9FBB24191CE1C4AF00F6950C /* SwiftyJSON iOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SwiftyJSON iOS Tests.xctest";
+			remoteRef = 9FBB24181CE1C4AF00F6950C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9FBB241B1CE1C4AF00F6950C /* SwiftyJSON.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftyJSON.framework;
+			remoteRef = 9FBB241A1CE1C4AF00F6950C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9FBB241D1CE1C4AF00F6950C /* SwiftyJSON OSX Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SwiftyJSON OSX Tests.xctest";
+			remoteRef = 9FBB241C1CE1C4AF00F6950C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9FBB241F1CE1C4AF00F6950C /* SwiftyJSON.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftyJSON.framework;
+			remoteRef = 9FBB241E1CE1C4AF00F6950C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9FBB24211CE1C4AF00F6950C /* SwiftyJSON.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftyJSON.framework;
+			remoteRef = 9FBB24201CE1C4AF00F6950C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9FBB24231CE1C4AF00F6950C /* SwiftyJSON tvOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SwiftyJSON tvOS Tests.xctest";
+			remoteRef = 9FBB24221CE1C4AF00F6950C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		18B606FB1C52354D00A79932 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FBB23C21CDB1C1800F6950C /* Wyue-GutiFangsong-NC.otf in Resources */,
 				18B6070B1C52354D00A79932 /* LaunchScreen.storyboard in Resources */,
 				18B607081C52354D00A79932 /* Assets.xcassets in Resources */,
 				18B607061C52354D00A79932 /* Main.storyboard in Resources */,
@@ -264,6 +426,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FBB23C31CDB1C1800F6950C /* Wyue-GutiFangsong-NC.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,6 +434,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FBB23C41CDB1C1800F6950C /* Wyue-GutiFangsong-NC.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +445,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FBB23C51CDB1D3800F6950C /* Wyue-GutiFangsong-NC.otf in Sources */,
 				18B311D81C5A50F3001774E9 /* SearchViewController.swift in Sources */,
 				18B607331C5280BC00A79932 /* BookTableViewController.swift in Sources */,
 				18B607311C523DA800A79932 /* BookTableViewCell.swift in Sources */,
@@ -288,7 +453,9 @@
 				18B607031C52354D00A79932 /* ViewController.swift in Sources */,
 				187D70811C54DDC000F75BFB /* DetailViewController.swift in Sources */,
 				187D70851C5681E400F75BFB /* LoginViewController.swift in Sources */,
+				9FBB24081CE1C22E00F6950C /* DoubanSearch.swift in Sources */,
 				18B607011C52354D00A79932 /* AppDelegate.swift in Sources */,
+				9FBB24051CE1AF0A00F6950C /* DoubanAnnotation.swift in Sources */,
 				18B6072F1C52369900A79932 /* Book.swift in Sources */,
 				187D70831C552E7C00F75BFB /* EditViewController.swift in Sources */,
 			);
@@ -322,6 +489,11 @@
 			isa = PBXTargetDependency;
 			target = 18B606FC1C52354D00A79932 /* PoCha */;
 			targetProxy = 18B6071D1C52354D00A79932 /* PBXContainerItemProxy */;
+		};
+		9FBB24271CE1C5F700F6950C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "SwiftyJSON iOS";
+			targetProxy = 9FBB24261CE1C5F700F6950C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -431,7 +603,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = PoCha/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.regulusxg.PoCha;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -443,7 +617,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = PoCha/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.regulusxg.PoCha;
 				PRODUCT_NAME = "$(TARGET_NAME)";

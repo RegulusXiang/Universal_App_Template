@@ -22,11 +22,14 @@ class ViewController: UIViewController {
     
     
     @IBAction func mainButtonTapped(sender: AnyObject) {
-       //DoubanAPI.getBookInfoByID("1003078")
+       //DoubanAPI.getBookInfoByID("26713431")
        //DoubanAPI.getBookInfoByISBN("7505715666")
        //DoubanAPI.getBookInfoByISBN("9787544749527")
        //DoubanAPI.searchBook("悲伤与理智")
-        DoubanAPI.getUserCollectionForBook("4117922",user_id: "70057728")
+        //DoubanAPI.getUserCollectionForBook("4117922",user_id: "70057728")
+        //DoubanAPI.getAnnotationByID("37642114")
+        //DoubanAPI.getBookAnnotationsByBookID("26264154")
+        DoubanAPI.searchKeywordForBookID("小王子")
     }
 
 

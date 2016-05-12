@@ -90,7 +90,7 @@
                   moduleName = "DoubanAPI"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/regulus/Documents/Universal_App_Template/DoubanAPI/DoubanAPI/DoubanBook.swift"
-                  timestampString = "479647145.217137"
+                  timestampString = "484107596.823072"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -105,7 +105,7 @@
                   moduleName = "DoubanAPI"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/regulus/Documents/Universal_App_Template/DoubanAPI/DoubanAPI/DoubanBook.swift"
-                  timestampString = "479647145.218305"
+                  timestampString = "484107596.824033"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -120,7 +120,7 @@
                   moduleName = "DoubanAPI"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/regulus/Documents/Universal_App_Template/DoubanAPI/DoubanAPI/DoubanBook.swift"
-                  timestampString = "479647145.218943"
+                  timestampString = "484107596.82444"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "63"
@@ -143,6 +143,86 @@
             startingLineNumber = "77"
             endingLineNumber = "77"
             landmarkName = "parseBookInfo(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DoubanAPI/DoubanAnnotation.swift"
+            timestampString = "483518542.21812"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "DoubanAnnotation"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DoubanAPI/Douban_API_v2.swift"
+            timestampString = "484106890.902258"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "265"
+            endingLineNumber = "265"
+            landmarkName = "parseAnnotationInfo(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DoubanAPI/Douban_API_v2.swift"
+            timestampString = "484106890.902258"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "312"
+            endingLineNumber = "312"
+            landmarkName = "parseBookAnnotations(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DoubanAPI/Douban_API_v2.swift"
+            timestampString = "484106890.902258"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "319"
+            endingLineNumber = "319"
+            landmarkName = "parseBookAnnotations(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DoubanAPI/Douban_API_v2.swift"
+            timestampString = "484106634.217293"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "192"
+            endingLineNumber = "192"
+            landmarkName = "searchKeywordForBookID(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

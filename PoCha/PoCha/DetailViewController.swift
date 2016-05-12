@@ -30,6 +30,8 @@ class DetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //self.titleLabel.text = book?.title
 
         //Set up view if editing an existing book
         if let book = book{

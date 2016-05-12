@@ -16,6 +16,7 @@
 		18FCD7B71C60D07D00A03A6E /* DoubanAPIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FCD7B61C60D07D00A03A6E /* DoubanAPIUITests.swift */; };
 		18FCD7C51C60D11900A03A6E /* Douban_API_v2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FCD7C41C60D11900A03A6E /* Douban_API_v2.swift */; };
 		9F1AD4E51C92DA37007BB05E /* DoubanBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1AD4E41C92DA37007BB05E /* DoubanBook.swift */; };
+		9FBB237D1CD1E74800F6950C /* DoubanAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBB237C1CD1E74800F6950C /* DoubanAnnotation.swift */; };
 		9FF7756D1C954B6C00CC5310 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF7756C1C954B6C00CC5310 /* SwiftyJSON.swift */; };
 		9FF775861C9553AA00CC5310 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FF775791C9552CD00CC5310 /* SwiftyJSON.framework */; };
 		9FF775871C9553AA00CC5310 /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9FF775791C9552CD00CC5310 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -125,6 +126,7 @@
 		18FCD7B81C60D07D00A03A6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18FCD7C41C60D11900A03A6E /* Douban_API_v2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Douban_API_v2.swift; sourceTree = "<group>"; };
 		9F1AD4E41C92DA37007BB05E /* DoubanBook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubanBook.swift; sourceTree = "<group>"; };
+		9FBB237C1CD1E74800F6950C /* DoubanAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubanAnnotation.swift; sourceTree = "<group>"; };
 		9FF7756C1C954B6C00CC5310 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = "../../../SwiftyJSON-master副本/Source/SwiftyJSON.swift"; sourceTree = "<group>"; };
 		9FF7756E1C9552CD00CC5310 /* SwiftyJSON.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftyJSON.xcodeproj; path = ../SwiftyJSON/SwiftyJSON.xcodeproj; sourceTree = "<group>"; };
 		9FF7758B1C96C19100CC5310 /* DoubanBookCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubanBookCollection.swift; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 				18FCD7961C60D07C00A03A6E /* AppDelegate.swift */,
 				9F1AD4E41C92DA37007BB05E /* DoubanBook.swift */,
 				9FF7758B1C96C19100CC5310 /* DoubanBookCollection.swift */,
+				9FBB237C1CD1E74800F6950C /* DoubanAnnotation.swift */,
 				18FCD7C41C60D11900A03A6E /* Douban_API_v2.swift */,
 				18FCD7981C60D07C00A03A6E /* ViewController.swift */,
 				18FCD79A1C60D07C00A03A6E /* Main.storyboard */,
@@ -420,6 +423,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FBB237D1CD1E74800F6950C /* DoubanAnnotation.swift in Sources */,
 				18FCD7C51C60D11900A03A6E /* Douban_API_v2.swift in Sources */,
 				18FCD7991C60D07C00A03A6E /* ViewController.swift in Sources */,
 				18FCD7971C60D07C00A03A6E /* AppDelegate.swift in Sources */,
