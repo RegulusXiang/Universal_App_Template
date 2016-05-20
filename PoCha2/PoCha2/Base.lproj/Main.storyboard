@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
     <scenes>
-        <!--Numbers-->
+        <!--搜索-->
         <scene sceneID="wSd-5s-Hsu">
             <objects>
                 <tableViewController id="x6Q-0q-ALw" customClass="TableViewController" customModule="PoCha2" customModuleProvider="target" sceneMemberID="viewController">
@@ -37,7 +37,7 @@
                             <outlet property="delegate" destination="x6Q-0q-ALw" id="306-Ub-YIQ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Numbers" id="xP4-Yh-oAr"/>
+                    <navigationItem key="navigationItem" title="搜索" id="xP4-Yh-oAr"/>
                     <connections>
                         <outlet property="searchBar" destination="Z5K-LD-4Kr" id="AWR-Pc-hj9"/>
                         <outlet property="tableView" destination="IIT-6Y-Aeb" id="OtQ-Bo-GQU"/>

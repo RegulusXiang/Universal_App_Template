@@ -4,11 +4,13 @@
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "67620B5EFA902936DF04070AF595B76AB0333747" : 0,
     "C861FC00CEE0F6A6BE81FCFF6785FAA78C58EBB3" : 0,
     "BD4BAD4DDA1C6DD24D8A8A874491AE3888B15F2C" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "37088E87-6D9C-4788-9594-F026AF0C1005",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "67620B5EFA902936DF04070AF595B76AB0333747" : "Universal_App_Template\/Alamofire\/",
     "C861FC00CEE0F6A6BE81FCFF6785FAA78C58EBB3" : "Universal_App_Template\/SwiftyJSON\/",
     "BD4BAD4DDA1C6DD24D8A8A874491AE3888B15F2C" : "Universal_App_Template\/"
   },
@@ -16,6 +18,11 @@
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
   "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "DoubanAPI\/DoubanAPI.xcodeproj",
   "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Alamofire\/Alamofire.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "67620B5EFA902936DF04070AF595B76AB0333747"
+    },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/RegulusXiang\/Universal_App_Template.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
