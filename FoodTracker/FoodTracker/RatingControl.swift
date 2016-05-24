@@ -9,12 +9,12 @@
 import UIKit
 
 class RatingControl: UIView {
-
+    
     /*
     // Only override drawRect: if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
     override func drawRect(rect: CGRect) {
-        // Drawing code
+    // Drawing code
     }
     */
     
@@ -58,23 +58,22 @@ class RatingControl: UIView {
         let emptyStarImage = UIImage(named: "emptyStar")
         
         for _ in 0..<stars{  //The underscore (_) represents a wildcard, which you can use when you don’t need to know which iteration of the loop is currently executing.
-        //let button = UIButton(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
-        let button = UIButton()
+            //let button = UIButton(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
+            let button = UIButton()
             button.setImage(emptyStarImage, forState: .Normal)
             button.setImage(filledStarImage, forState: .Selected)
             button.setImage(filledStarImage, forState: [.Highlighted, .Selected])
-        //button.backgroundColor = UIColor.redColor()
+            //button.backgroundColor = UIColor.redColor()
             button.adjustsImageWhenHighlighted = false //make sure that the image doesn’t show an additional highlight during the state change
-        button.addTarget(self, action: "ratingButtonTapped:", forControlEvents: .TouchDown)
-        addSubview(button)
-        ratingButtons += [button]
-        
+            button.addTarget(self, action: "ratingButtonTapped:", forControlEvents: .TouchDown)
+            addSubview(button)
+            ratingButtons += [button]
+            
         }
         
     }
     
     override func intrinsicContentSize() -> CGSize {
-//        return CGSize(width: 240, height: 44)
         let buttonSize = Int(frame.size.height)
         let width = (buttonSize + spacing) * stars
         
@@ -98,5 +97,5 @@ class RatingControl: UIView {
             button.selected = index < rating
         }
     }
-
+    
 }

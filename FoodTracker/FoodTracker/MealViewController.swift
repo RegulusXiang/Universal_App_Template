@@ -9,11 +9,11 @@
 import UIKit
 
 class MealViewController: UIViewController, UITextFieldDelegate,
-                      UIImagePickerControllerDelegate, UINavigationControllerDelegate
-    {// adopt the protocol for UITextFieldDelegate
-
+    UIImagePickerControllerDelegate, UINavigationControllerDelegate
+{// adopt the protocol for UITextFieldDelegate
+    
     //MARK: Properties
-    @IBOutlet weak var nameTextField: UITextField! //IB for interface builder, weak means it can be nil, 
+    @IBOutlet weak var nameTextField: UITextField! //IB for interface builder, weak means it can be nil,
     //! meansthe type is an implicitly unwrapped optional, which is an
     //optional type that will always have a value after the value is first set.
     
@@ -61,12 +61,12 @@ class MealViewController: UIViewController, UITextFieldDelegate,
         checkValidMealName()
         
     }
-
+    
     //I have no need to implement this method.
-//    override func didReceiveMemoryWarning() {
-//        super.didReceiveMemoryWarning()
-//        // Dispose of any resources that can be recreated.
-//    }
+    //    override func didReceiveMemoryWarning() {
+    //        super.didReceiveMemoryWarning()
+    //        // Dispose of any resources that can be recreated.
+    //    }
     
     //MARK: Navigation
     
@@ -85,11 +85,8 @@ class MealViewController: UIViewController, UITextFieldDelegate,
         }
         
     }
-
+    
     //MARK: Action
-//    @IBAction func setDefaultLabel(sender: UIButton) {
-//        mealNameLabel.text = "Default Text"
-//    }
     
     //it’s quite easy to give a view the same capabilities as a control
     //by adding a gesture recognizer to it.
@@ -159,7 +156,7 @@ class MealViewController: UIViewController, UITextFieldDelegate,
     }
     
     
-   
+    
     
 }
 

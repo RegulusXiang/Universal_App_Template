@@ -12,9 +12,8 @@ class BookTableViewCell: UITableViewCell {
     
     //MARK: Properties
     @IBOutlet weak var titleLabel: UILabel!
-    //@IBOutlet weak var authorLabel: UILabel!
     @IBOutlet weak var commentLabel: UILabel!
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -23,11 +22,11 @@ class BookTableViewCell: UITableViewCell {
         titleLabel.font = UIFont(name: "Wyue-GutiFangsong-NC", size: 26.0)
         commentLabel.font = UIFont(name: "Wyue-GutiFangsong-NC", size: 15.0)
     }
-
+    
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
-
+    
 }

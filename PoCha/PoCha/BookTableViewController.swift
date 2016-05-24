@@ -23,11 +23,11 @@ class BookTableViewController: UITableViewController {
             author_intro: "圣埃克苏佩里",
             summary: "小王子驾到！",
             comment: "读书消得泼茶香，当时只道是寻常。")
-    
+        
         books.insert(sampleBook!, atIndex: books.count)
         
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -37,19 +37,16 @@ class BookTableViewController: UITableViewController {
         if let savedBooks = loadBooks() {
             books += savedBooks
         } else {
-        loadSampleBooks()
+            loadSampleBooks()
         }
     }
     
     //自定义navigation bar样式，由于BookTableViewController的root view controller为
     //navigation controller，故在此处对其进行自定义
     override func viewDidAppear(animated: Bool) {
-        var nav = self.navigationController?.navigationBar
-        
-        //nav?.barStyle = UIBarStyle.BlackTranslucent
+        let nav = self.navigationController?.navigationBar
         
         let barColor = UIColor(red: 0x36/255.0, green: 0x74/255.0, blue: 0x59/255.0, alpha: 1.0)
-        //nav?.titleTextAttributes ＝ UIColor.greenColor()
         //按钮文字颜色
         nav?.tintColor = UIColor.whiteColor()
         //bar背景颜色
@@ -58,42 +55,41 @@ class BookTableViewController: UITableViewController {
         nav?.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor(), NSFontAttributeName:UIFont(name: "Wyue-GutiFangsong-NC", size: 24.0)!];
         
     }
-
-
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     // MARK: - Table view data source
-
+    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
-
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return books.count
     }
-
+    
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         // Table view cells are reused and should be dequeued using a cell identifier.
         let cellIdentifier = "BookTableViewCell"
         
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! BookTableViewCell //downcast the type of the cell to your custom cell subclass, BookTableViewCell.
-
+        
         // Configure the cell...
         let book = books[indexPath.row]
         cell.titleLabel.text = book.title
-        //cell.authorLabel.text = book.author
         cell.commentLabel.text = book.comment
-
+        
         return cell
     }
     
-
+    
     
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
@@ -101,7 +97,7 @@ class BookTableViewController: UITableViewController {
         return true
     }
     
-
+    
     
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
@@ -115,28 +111,28 @@ class BookTableViewController: UITableViewController {
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }
     }
     
-
+    
     /*
     // Override to support rearranging the table view.
     override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
+    
     }
     */
-
+    
     /*
     // Override to support conditional rearranging of the table view.
     override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
+    // Return false if you do not want the item to be re-orderable.
+    return true
     }
     */
-
+    
     
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
@@ -148,7 +144,7 @@ class BookTableViewController: UITableViewController {
                 let selectedBook = books[indexPath!.row]
                 bookDetailViewController.book = selectedBook
             }
-        
+            
         }
     }
     
@@ -159,12 +155,12 @@ class BookTableViewController: UITableViewController {
         
         if let sourceViewController = sender.sourceViewController as? AddViewController,
             //bug located it's sourceViewController not destinationViewController
-        book = sourceViewController.book
+            book = sourceViewController.book
         {
             print(book.title)
             print(book.author)
             print(book.comment)
-
+            
             //Add a new book
             let newIndexPath = NSIndexPath(forRow: books.count, inSection: 0)
             books.append(book)
@@ -200,7 +196,7 @@ class BookTableViewController: UITableViewController {
     }
     
     func loadBooks() -> [Book]? {
-    return NSKeyedUnarchiver.unarchiveObjectWithFile(Book.ArchiveURL.path!) as? [Book]
+        return NSKeyedUnarchiver.unarchiveObjectWithFile(Book.ArchiveURL.path!) as? [Book]
     }
     
     

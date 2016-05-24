@@ -18,21 +18,13 @@ class DetailViewController: UIViewController {
     
     //buttons
     @IBOutlet weak var editButton: UIBarButtonItem!
-    //@IBOutlet weak var doneButton: UIBarButtonItem!
-    
-    //In the done view
-    //@IBOutlet weak var editedTitleLabel: UILabel!
-    //@IBOutlet weak var editedCommentTextView: UITextView!
-    
     
     var book: Book?
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //self.titleLabel.text = book?.title
-
         //Set up view if editing an existing book
         if let book = book{
             navigationItem.title = book.title
@@ -41,23 +33,23 @@ class DetailViewController: UIViewController {
         }
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         if segue.identifier == "EditComment" {
-        let bookEditViewController = segue.destinationViewController as! EditViewController
-        if editButton === sender {
-            bookEditViewController.book = self.book
+            let bookEditViewController = segue.destinationViewController as! EditViewController
+            if editButton === sender {
+                bookEditViewController.book = self.book
             }
         }
         
@@ -65,14 +57,13 @@ class DetailViewController: UIViewController {
     
     @IBAction func unwindToDetailView(sender: UIStoryboardSegue) {
         if let sourceViewController = sender.sourceViewController as? EditViewController {
-        //book = sourceViewController.book {
             //Update an existing book
             self.book = sourceViewController.book
             
             //Refresh the view, escpecially for the comment text field
             //commentTextView.reloadInputViews()
         }
-        
+            
         else {
             //Add a new book
             
@@ -80,10 +71,10 @@ class DetailViewController: UIViewController {
         
     }
     
-        
+    
 }
-    
 
-    
+
+
 
 

@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9FBB25201CEAFAAF00F6950C"
-               BuildableName = "AlamofirePlayground.app"
-               BlueprintName = "AlamofirePlayground"
-               ReferencedContainer = "container:AlamofirePlayground.xcodeproj">
+               BlueprintIdentifier = "D7D2D5F11C38072400B06F29"
+               BuildableName = "FoodTracker.app"
+               BlueprintName = "FoodTracker"
+               ReferencedContainer = "container:FoodTracker.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,30 +32,20 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9FBB25341CEAFAAF00F6950C"
-               BuildableName = "AlamofirePlaygroundTests.xctest"
-               BlueprintName = "AlamofirePlaygroundTests"
-               ReferencedContainer = "container:AlamofirePlayground.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9FBB253F1CEAFAAF00F6950C"
-               BuildableName = "AlamofirePlaygroundUITests.xctest"
-               BlueprintName = "AlamofirePlaygroundUITests"
-               ReferencedContainer = "container:AlamofirePlayground.xcodeproj">
+               BlueprintIdentifier = "D7D2D6051C38072400B06F29"
+               BuildableName = "FoodTrackerTests.xctest"
+               BlueprintName = "FoodTrackerTests"
+               ReferencedContainer = "container:FoodTracker.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9FBB25201CEAFAAF00F6950C"
-            BuildableName = "AlamofirePlayground.app"
-            BlueprintName = "AlamofirePlayground"
-            ReferencedContainer = "container:AlamofirePlayground.xcodeproj">
+            BlueprintIdentifier = "D7D2D5F11C38072400B06F29"
+            BuildableName = "FoodTracker.app"
+            BlueprintName = "FoodTracker"
+            ReferencedContainer = "container:FoodTracker.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -75,10 +65,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9FBB25201CEAFAAF00F6950C"
-            BuildableName = "AlamofirePlayground.app"
-            BlueprintName = "AlamofirePlayground"
-            ReferencedContainer = "container:AlamofirePlayground.xcodeproj">
+            BlueprintIdentifier = "D7D2D5F11C38072400B06F29"
+            BuildableName = "FoodTracker.app"
+            BlueprintName = "FoodTracker"
+            ReferencedContainer = "container:FoodTracker.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -94,10 +84,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9FBB25201CEAFAAF00F6950C"
-            BuildableName = "AlamofirePlayground.app"
-            BlueprintName = "AlamofirePlayground"
-            ReferencedContainer = "container:AlamofirePlayground.xcodeproj">
+            BlueprintIdentifier = "D7D2D5F11C38072400B06F29"
+            BuildableName = "FoodTracker.app"
+            BlueprintName = "FoodTracker"
+            ReferencedContainer = "container:FoodTracker.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

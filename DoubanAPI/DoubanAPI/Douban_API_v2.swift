@@ -53,7 +53,7 @@ class DoubanAPI
         print(images["large"])
         images["medium"] = json["images"]["medium"].stringValue
         print(images["medium"])
-
+        
         
         //考虑作者译者数组存在多个元素的情况
         let author:String = json["author"][0].stringValue
@@ -83,7 +83,7 @@ class DoubanAPI
         
         print("tags: ",terminator: "")
         //tags字典构成数组
-        for var i in 0..<json["tags"].count { //..<不包含上界
+        for i in 0..<json["tags"].count { //..<不包含上界
             let count: Int = json["tags"][i]["count"].intValue
             let name: String = json["tags"][i]["name"].stringValue
             print(count)
@@ -148,7 +148,7 @@ class DoubanAPI
         }
         
         //tags string数组
-        for var i in 0..<json["tags"].count {
+        for i in 0..<json["tags"].count {
             let tag: String = json["tags"][i].stringValue
             print(tag)
         }
@@ -164,9 +164,6 @@ class DoubanAPI
         let request = NSURLRequest(URL: NSURL(string: "https://api.douban.com/v2/book/\(id)")!)
         //request.HTTPMethod = method
         let task = session.dataTaskWithRequest(request, completionHandler: { (data, response, error) -> Void in
-//            let string = NSString(data: data!, encoding: NSUTF8StringEncoding)
-//            print(string)
-            
             let json = JSON(data: data!)
             parseBookInfo(json)
             
@@ -180,9 +177,6 @@ class DoubanAPI
         let request = NSURLRequest(URL: NSURL(string: "https://api.douban.com/v2/book/isbn/\(isbn)")!)
         //request.HTTPMethod = method
         let task = session.dataTaskWithRequest(request, completionHandler: { (data, response, error) -> Void in
-//            let string = NSString(data: data!, encoding: NSUTF8StringEncoding)
-//            print(string)
-            
             let json = JSON(data: data!)
             parseBookInfo(json)
         })
@@ -194,9 +188,7 @@ class DoubanAPI
     //根据关键字搜索结果获取图书ID
     static func getBookID(json:JSON) -> String{
         var book_id = ""
-        
         book_id = json["books",0,"id"].stringValue
-        //print(book_id)
         return book_id
     }
     
@@ -212,8 +204,6 @@ class DoubanAPI
         //let request = NSURLRequest(URL: NSURL(string: "https://api.douban.com/v2/book/search?q=\(key)")!)
         //request.HTTPMethod = method
         let task = session.dataTaskWithRequest(request, completionHandler: { (data, response, error) -> Void in
-            //let string = NSString(data: data!, encoding: NSUTF8StringEncoding)
-            //print(string)
             let json = JSON(data:data!)
             let book_id = getBookID(json)
             print(book_id)
@@ -226,7 +216,6 @@ class DoubanAPI
     static func searchBook (key:String) {
         let session = NSURLSession.sharedSession()
         let request = NSURLRequest(URL: NSURL(string: "https://api.douban.com/v2/book/search?q=\(key)")!)
-        //request.HTTPMethod = method
         let task = session.dataTaskWithRequest(request, completionHandler: { (data, response, error) -> Void in
             let string = NSString(data: data!, encoding: NSUTF8StringEncoding)
             print(string)
@@ -238,7 +227,6 @@ class DoubanAPI
     static func getBookTagsByBookID(id:String) {
         let session = NSURLSession.sharedSession()
         let request = NSURLRequest(URL: NSURL(string: "https://api.douban.com/v2/book/\(id)/tags")!)
-        //request.HTTPMethod = method
         let task = session.dataTaskWithRequest(request, completionHandler: { (data, response, error) -> Void in
             let string = NSString(data: data!, encoding: NSUTF8StringEncoding)
             print(string)
@@ -250,7 +238,6 @@ class DoubanAPI
     static func getBookTagsByUserID (id:String) {
         let session = NSURLSession.sharedSession()
         let request = NSURLRequest(URL: NSURL(string: "https://api.douban.com/v2/book/user/\(id)/tags")!)
-        //request.HTTPMethod = method
         let task = session.dataTaskWithRequest(request, completionHandler: { (data, response, error) -> Void in
             let string = NSString(data: data!, encoding: NSUTF8StringEncoding)
             print(string)
@@ -262,7 +249,6 @@ class DoubanAPI
     static func getBooksCollectedByUser (id: String) {
         let session = NSURLSession.sharedSession()
         let request = NSURLRequest(URL: NSURL(string: "https://api.douban.com/v2/book/user/\(id)/collections")!)
-        //request.HTTPMethod = method
         let task = session.dataTaskWithRequest(request, completionHandler: { (data, response, error) -> Void in
             let string = NSString(data: data!, encoding: NSUTF8StringEncoding)
             print(string)
@@ -274,7 +260,6 @@ class DoubanAPI
     static func getUserCollectionForBook (book_id: String, user_id: String) {
         let session = NSURLSession.sharedSession()
         let request = NSURLRequest(URL: NSURL(string: "https://api.douban.com/v2/book/\(book_id)/collection?user_id=\(user_id)")!)
-        //request.HTTPMethod = method
         let task = session.dataTaskWithRequest(request, completionHandler: { (data, response, error) -> Void in
             let string = NSString(data: data!, encoding: NSUTF8StringEncoding)
             print(string)
@@ -301,7 +286,7 @@ class DoubanAPI
         annotation.content = json["content"].stringValue
         annotation.comments_count = json["comments_count"].intValue
         annotation.time = json["time"].stringValue
-    
+        
         //不打印可能是图片的笔记
         if(annotation.content?.containsString("图片") != nil) {
             print("图片笔记")
@@ -317,7 +302,6 @@ class DoubanAPI
     static func getBookAnnotationsByUserID (id: String) {
         let session = NSURLSession.sharedSession()
         let request = NSURLRequest(URL: NSURL(string: "https://api.douban.com/v2/book/user/\(id)/annotations")!)
-        //request.HTTPMethod = method
         let task = session.dataTaskWithRequest(request, completionHandler: { (data, response, error) -> Void in
             let string = NSString(data: data!, encoding: NSUTF8StringEncoding)
             print(string)
@@ -335,10 +319,6 @@ class DoubanAPI
         var annotations = [DoubanAnnotation](count: total, repeatedValue: note)
         print(total)
         
-        //let string = json["annotations"][0]["author_user"]["name"].stringValue
-        //print(string)
-        
-        
         for var i = 0;i < total; i++ {
             annotations[i].id = json["annotations"][i]["id"].stringValue
             annotations[i].author_id = json["annotations"][i]["author_user"]["name"].stringValue
@@ -355,10 +335,7 @@ class DoubanAPI
     static func getBookAnnotationsByBookID (id: String) {
         let session = NSURLSession.sharedSession()
         let request = NSURLRequest(URL: NSURL(string: "https://api.douban.com/v2/book/\(id)/annotations")!)
-        //request.HTTPMethod = method
         let task = session.dataTaskWithRequest(request, completionHandler: { (data, response, error) -> Void in
-            //let string = NSString(data: data!, encoding: NSUTF8StringEncoding)
-            //print(string)
             
             let json = JSON(data:data!)
             parseBookAnnotations(json)
@@ -370,10 +347,8 @@ class DoubanAPI
     static func getAnnotationByID (id: String) {
         let session = NSURLSession.sharedSession()
         let request = NSURLRequest(URL: NSURL(string: "https://api.douban.com/v2/book/annotation/\(id)")!)
-        //request.HTTPMethod = method
+        
         let task = session.dataTaskWithRequest(request, completionHandler: { (data, response, error) -> Void in
-            //let string = NSString(data: data!, encoding: NSUTF8StringEncoding)
-            //print(string)
             
             let json = JSON(data: data!)
             parseAnnotationInfo(json)
@@ -386,7 +361,6 @@ class DoubanAPI
     static func getBookSeriesInfoByID (id: String) {
         let session = NSURLSession.sharedSession()
         let request = NSURLRequest(URL: NSURL(string: "https://api.douban.com/v2/book/series/\(id)/books")!)
-        //request.HTTPMethod = method
         let task = session.dataTaskWithRequest(request, completionHandler: { (data, response, error) -> Void in
             let string = NSString(data: data!, encoding: NSUTF8StringEncoding)
             print(string)

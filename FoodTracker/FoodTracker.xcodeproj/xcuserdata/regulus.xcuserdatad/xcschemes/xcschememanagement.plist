@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>AlamofirePlayground.xcscheme</key>
+		<key>FoodTracker.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,17 +12,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>9FBB25201CEAFAAF00F6950C</key>
+		<key>D7D2D5F11C38072400B06F29</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9FBB25341CEAFAAF00F6950C</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>9FBB253F1CEAFAAF00F6950C</key>
+		<key>D7D2D6051C38072400B06F29</key>
 		<dict>
 			<key>primary</key>
 			<true/>

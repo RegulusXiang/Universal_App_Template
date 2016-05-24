@@ -8,28 +8,10 @@
 
 import UIKit
 
-//struct DoubanImage {
-//    var small: String
-//    var large: String
-//    var medium: String
-//}
-
-//struct DoubanBookRating {
-//    var max: Int
-//    var numRates: Int
-//    var average: Double
-//    var min: Int
-//}
-
 struct DoubanBookTag {
     var count: Int
     var name: String
 }
-
-//struct DoubanBookSeries {
-//    var id: Int
-//    var title: String
-//}
 
 class DoubanBook: NSObject {
     
@@ -75,5 +57,4 @@ class DoubanBook: NSObject {
     var ebook_price: Double = 0.0
     
     
-
 }

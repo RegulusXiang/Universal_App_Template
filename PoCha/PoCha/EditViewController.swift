@@ -13,16 +13,14 @@ class EditViewController: UIViewController, UITextViewDelegate {
     //MARK: Properties
     @IBOutlet weak var editedTitleLabel: UILabel!
     @IBOutlet weak var editedTextView: UITextView!
-    
     @IBOutlet weak var saveButton: UIBarButtonItem!
     
-    //@IBOutlet weak var doneButton: UIBarButtonItem!
     
     var book: Book?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         
         //handle the text view's user input via delegate callbacks
@@ -34,7 +32,7 @@ class EditViewController: UIViewController, UITextViewDelegate {
         }
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -49,10 +47,9 @@ class EditViewController: UIViewController, UITextViewDelegate {
         return true
     }
     
-
     
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
@@ -65,5 +62,5 @@ class EditViewController: UIViewController, UITextViewDelegate {
         }
     }
     
-
+    
 }

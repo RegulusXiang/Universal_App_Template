@@ -51,7 +51,7 @@ class SearchViewController: UITableViewController ,UISearchResultsUpdating
     
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
         
         // 3
         if (self.resultSearchController.active) {
@@ -65,7 +65,7 @@ class SearchViewController: UITableViewController ,UISearchResultsUpdating
             return cell
         }
     }
-
+    
     func updateSearchResultsForSearchController(searchController: UISearchController)
     {
         filteredTableData.removeAll(keepCapacity: false)
@@ -76,6 +76,6 @@ class SearchViewController: UITableViewController ,UISearchResultsUpdating
         
         self.tableView.reloadData()
     }
-
+    
 }
 

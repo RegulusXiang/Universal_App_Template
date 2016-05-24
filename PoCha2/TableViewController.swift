@@ -10,7 +10,7 @@ import UIKit
 
 class TableViewController: UIViewController, UITableViewDelegate, UISearchBarDelegate //, UISearchResultsUpdating
 {
-
+    
     //MARK: Properties
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet var tableView: UITableView!
@@ -27,18 +27,6 @@ class TableViewController: UIViewController, UITableViewDelegate, UISearchBarDel
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        self.searchController = ({
-//            //在TableView顶部添加SearBar
-//            let controller = UISearchController(searchResultsController: nil)
-//            //controller.searchResultsUpdater = self
-//            controller.dimsBackgroundDuringPresentation = false
-//            controller.searchBar.sizeToFit()
-//            
-//            self.tableView.tableHeaderView = controller.searchBar
-//            
-//            return controller
-//        })()
         
         tableView.delegate = self
         searchBar.delegate = self
@@ -65,7 +53,7 @@ class TableViewController: UIViewController, UITableViewDelegate, UISearchBarDel
     
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) 
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
         
         // 3
         if (self.searchController.active) {
@@ -112,29 +100,29 @@ class TableViewController: UIViewController, UITableViewDelegate, UISearchBarDel
         */
         
         //方法2:失败
-//        while(true) {
-//            if(search.total == 0) {
-//                continue
-//            }
-//            else if (search.annotations.count == 81) {
-//                break
-//            }
-//        }
+        //        while(true) {
+        //            if(search.total == 0) {
+        //                continue
+        //            }
+        //            else if (search.annotations.count == 81) {
+        //                break
+        //            }
+        //        }
         
         //方法1.1:GCD queue，执行一个线程的main queue
-//        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
-//            //需要长时间处理的代码
-//            self.search.searchKeywordForBookID(searchBar.text!)
-//            dispatch_async(dispatch_get_main_queue(), {
-//                //需要主线程执行的代码
-//                for var i = 0; i < self.search.total; ++i {
-//                    print("--------------------MARK2---------------------")
-//                    print(self.search.annotations[i].author_id!)
-//                    self.filteredTableData[i] = self.search.annotations[i].author_id!
-//                }
-//        
-//            })
-//        })
+        //        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
+        //            //需要长时间处理的代码
+        //            self.search.searchKeywordForBookID(searchBar.text!)
+        //            dispatch_async(dispatch_get_main_queue(), {
+        //                //需要主线程执行的代码
+        //                for var i = 0; i < self.search.total; ++i {
+        //                    print("--------------------MARK2---------------------")
+        //                    print(self.search.annotations[i].author_id!)
+        //                    self.filteredTableData[i] = self.search.annotations[i].author_id!
+        //                }
+        //
+        //            })
+        //        })
         
         //方法1.2:GCD queue，采用一个FIFO且一次执行一个线程的serial queue
         let serialQueue: dispatch_queue_t = dispatch_queue_create("serial_queue",
@@ -143,37 +131,28 @@ class TableViewController: UIViewController, UITableViewDelegate, UISearchBarDel
         dispatch_async(serialQueue, {
             //NSLog("s1");
             self.search.searchKeywordForBookID(searchBar.text!)
-            });
+        });
         dispatch_async(serialQueue, {
             //sleep(2);
             //NSLog("s2");
             for var i = 0; i < self.search.total; ++i {
-                 print("--------------------MARK2---------------------")
-                 print(self.search.annotations[i].author_id!)
-                 self.filteredTableData[i] = self.search.annotations[i].author_id!
-                }
-            });
+                print("--------------------MARK2---------------------")
+                print(self.search.annotations[i].author_id!)
+                self.filteredTableData[i] = self.search.annotations[i].author_id!
+            }
+        });
         dispatch_async(serialQueue, {
             //sleep(1);
             //NSLog("s3");
             print("------------------MARK3-------------------")
             self.tableView.reloadData()
-            });
+        });
         
         print("Annotations.count: ",terminator: "")
         print(search.annotations.count)
         
         print("Total: ",terminator:"")
         print(search.total)
-        
-//        for var i = 0; i < search.total; ++i {
-//            print("--------------------MARK2---------------------")
-//            print(search.annotations[i].author_id!)
-//            filteredTableData[i] = search.annotations[i].author_id!
-//        }
-        
-        
-        
         
         
     }
@@ -191,24 +170,24 @@ class TableViewController: UIViewController, UITableViewDelegate, UISearchBarDel
     
     //获取搜索结果并建立filteredData数组
     /*This method is automatically called whenever the search bar becomes the first responder or changes are made to the text in the search bar. Perform any required filtering and updating inside of this method.
-
+    
     func updateSearchResultsForSearchController(searchController: UISearchController)
     {
-        filteredTableData.removeAll(keepCapacity: false)
-        
-        //根据seaerchBar的text计算得到过滤后字符串数组filteredTableData
-        let searchPredicate = NSPredicate(format: "SELF CONTAINS[c] %@", searchController.searchBar.text!)
-        let array = (tableData as NSArray).filteredArrayUsingPredicate(searchPredicate)
-        filteredTableData = array as! [String]
-        
-        //根据searchBar内容搜索图书笔记
-        search.searchKeywordForBookID(searchController.searchBar.text!)
-        
-        for i in 0..<search.annotation.count {
-            filteredTableData[i] = search.annotation[i].author_id!
-        }
+    filteredTableData.removeAll(keepCapacity: false)
     
-        self.tableView.reloadData()
+    //根据seaerchBar的text计算得到过滤后字符串数组filteredTableData
+    let searchPredicate = NSPredicate(format: "SELF CONTAINS[c] %@", searchController.searchBar.text!)
+    let array = (tableData as NSArray).filteredArrayUsingPredicate(searchPredicate)
+    filteredTableData = array as! [String]
+    
+    //根据searchBar内容搜索图书笔记
+    search.searchKeywordForBookID(searchController.searchBar.text!)
+    
+    for i in 0..<search.annotation.count {
+    filteredTableData[i] = search.annotation[i].author_id!
+    }
+    
+    self.tableView.reloadData()
     }
     */
 }

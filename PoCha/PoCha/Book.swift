@@ -86,5 +86,5 @@ class Book: NSObject, NSCoding{
         
         self.init(title:title,author:author!,publisher:publisher!,author_intro:author_intro!,summary:summary!,comment:comment)
     }
-
+    
 }

@@ -50,11 +50,11 @@ class DoubanSearch {
             //可能包含内容为空的笔记
             if(json["annotations",i,"content"].stringValue != "") {
                 
-               self.annotations[i].id = json["annotations"][i]["id"].stringValue
-               self.annotations[i].author_id = json["annotations"][i]["author_user"]["name"].stringValue
-               self.annotations[i].page_no = json["annotations"][i]["page_no"].intValue
-               self.annotations[i].content = json["annotations"][i]["content"].stringValue
-               self.annotations[i].printAnnotation()
+                self.annotations[i].id = json["annotations"][i]["id"].stringValue
+                self.annotations[i].author_id = json["annotations"][i]["author_user"]["name"].stringValue
+                self.annotations[i].page_no = json["annotations"][i]["page_no"].intValue
+                self.annotations[i].content = json["annotations"][i]["content"].stringValue
+                self.annotations[i].printAnnotation()
             }
             else {
                 break
@@ -63,19 +63,13 @@ class DoubanSearch {
         }
         print("DoubanSearch-Annotations.count: ",terminator: "")
         print(self.annotations.count)
-        //return annotations
     }
     
     //获取某本图书的所有笔记
     func getBookAnnotationsByBookID (id: String) {
-        //let json = JSON()
         let session = NSURLSession.sharedSession()
         let request = NSURLRequest(URL: NSURL(string: "https://api.douban.com/v2/book/\(id)/annotations")!)
-        //request.HTTPMethod = method
         let task = session.dataTaskWithRequest(request, completionHandler: { (data, response, error) -> Void in
-            //let string = NSString(data: data!, encoding: NSUTF8StringEncoding)
-            //print(string)
-            
             let json = JSON(data:data!)
             self.parseBookAnnotations(json)
         })
@@ -83,14 +77,11 @@ class DoubanSearch {
     }
     
     
-    
     //MARK: 关键字搜索相关
     //根据关键字搜索结果获取图书ID
     func getBookID(json:JSON) -> String{
         var book_id = ""
-        
         book_id = json["books",0,"id"].stringValue
-        //print(book_id)
         return book_id
     }
     
@@ -100,15 +91,12 @@ class DoubanSearch {
         print(key)
         var url: String = "https://api.douban.com/v2/book/search?q=\(key)"
         print(url)
-        //var book_id: String
         //NSURL无法识别中文，需将其转制为UTF8编码
         url = url.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
         let request = NSURLRequest(URL: NSURL(string: url)!)
         var book_id  = ""
-       
+        
         let task = session.dataTaskWithRequest(request, completionHandler: { (data, response, error) -> Void in
-            //let string = NSString(data: data!, encoding: NSUTF8StringEncoding)
-            //print(string)
             let json = JSON(data:data!)
             book_id = self.getBookID(json)
             print("book_id: " + book_id)
