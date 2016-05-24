@@ -15,24 +15,34 @@ class DoubanAPI
     static func parseBookInfo(json: JSON) {
         
         let id: String = json["id"].stringValue
+        print("id: ",terminator: "")
         print(id)
         let isbn10: String = json["isbn10"].stringValue
+        print("isbn10: ",terminator: "")
         print(isbn10)
         let isbn13: String = json["isbn13"].stringValue
+        print("isbn13: ",terminator: "")
         print(isbn13)
         let title: String = json["title"].stringValue
+        print("title: ",terminator: "")
         print(title)
         let origin_title: String = json["origin_title"].stringValue
+        print("original_title: ",terminator: "")
         print(origin_title)
         let alt_title: String = json["alt_title"].stringValue
+        print("alt_title: ",terminator: "")
         print(alt_title)
         let subtitle: String = json["subtitle"].stringValue
+        print("subtitle: ",terminator: "")
         print(subtitle)
         let url: String = json["url"].stringValue
+        print("url: ",terminator: "")
         print(url)
         let alt: String = json["alt"].stringValue
+        print("alt: ",terminator: "")
         print(alt)
         let image: String = json["image"].stringValue
+        print("image: ",terminator: "")
         print(image)
         
         //images字典
@@ -47,15 +57,20 @@ class DoubanAPI
         
         //考虑作者译者数组存在多个元素的情况
         let author:String = json["author"][0].stringValue
+        print("author: ",terminator: "")
         print(author)
         let translator: String = json["translator"][0].stringValue
+        print("translator: ",terminator: "")
         print(translator)
         
         let publisher: String = json["publisher"].stringValue
+        print("publisher: ",terminator: "")
         print(publisher)
         let pubdate: String = json["pubdate"].stringValue
+        print("pubdate: ",terminator: "")
         print(pubdate)
         
+        print("rating: ",terminator: "")
         //rating字典
         var rating:[String: Double] = ["max":0.0,"numRaters":0.0,"average":0.0,"min":0.0]
         rating["max"] = json["rating"]["max"].doubleValue
@@ -66,6 +81,7 @@ class DoubanAPI
             print("\(a),\(b)")
         }
         
+        print("tags: ",terminator: "")
         //tags字典构成数组
         for var i in 0..<json["tags"].count { //..<不包含上界
             let count: Int = json["tags"][i]["count"].intValue
@@ -75,28 +91,38 @@ class DoubanAPI
         }
         
         let binding: String = json["binding"].stringValue
+        print("binding: ",terminator: "")
         print(binding)
         let price: Double = json["price"].doubleValue
+        print("price: ",terminator: "")
         print(price)
         
         //series字典，《小王子》返回值中没有series信息
         var series:[String:String] = ["id":"","title":""]
         series["id"] = json["series"]["id"].stringValue
         series["title"] = json["series"]["title"].stringValue
+        print("series_id: ",terminator: "")
         print(series["id"])
+        print("series_title: ",terminator: "")
         print(series["title"])
         
         let pages: Int = json["pages"].intValue
+        print("pages: ",terminator: "")
         print(pages)
         let author_intro: String = json["author_intro"].stringValue
+        print("author_intro: ",terminator: "")
         print(author_intro)
         let summary: String = json["summary"].stringValue
+        print("summary: ",terminator: "")
         print(summary)
         let catalog: String = json["catalog"].stringValue
+        print("catalog: ",terminator: "")
         print(catalog)
         let ebook_url: String = json["ebook_url"].stringValue
+        print("ebook_url: ",terminator: "")
         print(ebook_url)
         let ebook_price: Double = json["ebook_price"].doubleValue
+        print("ebook_price: ",terminator: "")
         print(ebook_price)
         
     }

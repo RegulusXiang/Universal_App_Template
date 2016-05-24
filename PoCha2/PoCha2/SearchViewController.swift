@@ -8,81 +8,74 @@
 
 import UIKit
 
-class SearchViewController: UIViewController, UISearchBarDelegate, UISearchControllerDelegate{
+class SearchViewController: UITableViewController ,UISearchResultsUpdating
+{
     
-    //MARK: properties
-    var keyword: String?
-    @IBOutlet weak var searchBar: UISearchBar!
+    let tableData = ["roaringwild","saintroller","randomevent","vermicelli"]
+    var filteredTableData = [String]()
+    var resultSearchController = UISearchController()
     
-    /// Search controller to help us with filtering.
-    var searchController: UISearchController!
-    
-    /// Secondary search results table view.
-    //var resultsTableController: ResultsTableController!
-    
-    /// Restoration state for UISearchController
-    //var restoredState = SearchControllerRestorableState()
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
-        //resultsTableController.tableView.delegate = self
+        self.resultSearchController = ({
+            let controller = UISearchController(searchResultsController: nil)
+            controller.searchResultsUpdater = self
+            controller.dimsBackgroundDuringPresentation = false
+            controller.searchBar.sizeToFit()
+            
+            self.tableView.tableHeaderView = controller.searchBar
+            
+            return controller
+        })()
         
-        //searchController = UISearchController(searchResultsController: resultsTableController)
-        //searchController.searchResultsUpdater = self
-        //searchController.searchBar.sizeToFit()
-        //tableView.tableHeaderView = searchController.searchBar
+        // Reload the table
+        self.tableView.reloadData()
+    }
+    
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        // 1
+        // Return the number of sections.
+        return 1
+    }
+    
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // 2
+        if (self.resultSearchController.active) {
+            return self.filteredTableData.count
+        }
+        else {
+            return self.tableData.count
+        }
+    }
+    
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
         
-        //searchController.delegate = self
-        //searchController.dimsBackgroundDuringPresentation = false // default is YES
-        //searchController.searchBar.delegate = self    // so we can monitor text
-        
-        searchBar.delegate = self
-        
+        // 3
+        if (self.resultSearchController.active) {
+            cell.textLabel?.text = filteredTableData[indexPath.row]
+            
+            return cell
+        }
+        else {
+            cell.textLabel?.text = tableData[indexPath.row]
+            
+            return cell
+        }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func updateSearchResultsForSearchController(searchController: UISearchController)
+    {
+        filteredTableData.removeAll(keepCapacity: false)
+        
+        let searchPredicate = NSPredicate(format: "SELF CONTAINS[c] %@", searchController.searchBar.text!)
+        let array = (tableData as NSArray).filteredArrayUsingPredicate(searchPredicate)
+        filteredTableData = array as! [String]
+        
+        self.tableView.reloadData()
     }
-    
-    // MARK: UISearchBarDelegate
-    
-    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
-        searchBar.resignFirstResponder()
-        //搜索按钮点击后触发的事件
-        keyword = searchBar.text
-        print(keyword)
-    }
-    
-    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
-        print("Cancel button clicked!")
-    }
-    
-    // MARK: UISearchControllerDelegate
-    
-    func presentSearchController(searchController: UISearchController) {
-        //debugPrint("UISearchControllerDelegate invoked method: \(__FUNCTION__).")
-    }
-    
-    func willPresentSearchController(searchController: UISearchController) {
-        //debugPrint("UISearchControllerDelegate invoked method: \(__FUNCTION__).")
-    }
-    
-    func didPresentSearchController(searchController: UISearchController) {
-        //debugPrint("UISearchControllerDelegate invoked method: \(__FUNCTION__).")
-    }
-    
-    func willDismissSearchController(searchController: UISearchController) {
-        //debugPrint("UISearchControllerDelegate invoked method: \(__FUNCTION__).")
-    }
-    
-    func didDismissSearchController(searchController: UISearchController) {
-        //debugPrint("UISearchControllerDelegate invoked method: \(__FUNCTION__).")
-    }
-
-
 
 }
 
